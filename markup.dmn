@@ -1,0 +1,3380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="com.elifcs.saas.mod.ruleengine.resource" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_61F8FB8F-F906-44E6-9F2A-CEEEAF434C87" name="markup" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="com.elifcs.saas.mod.ruleengine.resource">
+  <dmn:extensionElements/>
+  <dmn:itemDefinition id="_1E91659D-9345-4087-A41C-1E59164B5BFD" name="Supplier" isCollection="false">
+    <dmn:typeRef>string</dmn:typeRef>
+    <dmn:allowedValues kie:constraintType="enumeration" id="_5C4376DE-4017-452B-B7FE-4326DE3ED2DA">
+      <dmn:text>"1A", "1S", "1G", "PK", "G9", "FZ", "ER", "PF", "9P", "PA", "OV", "J9", "EK", "WY"</dmn:text>
+    </dmn:allowedValues>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_B7EA35A4-31E7-42F8-9429-FE7596D22C24" name="Pax Type" isCollection="false">
+    <dmn:typeRef>string</dmn:typeRef>
+    <dmn:allowedValues kie:constraintType="enumeration" id="_8BBBA434-AA91-402A-9E2C-780C6B787C7C">
+      <dmn:text>"ADT", "CHD", "INF"</dmn:text>
+    </dmn:allowedValues>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_DD19E8EF-626B-45C6-83D3-5FA4317E18E0" name="Air Line" isCollection="false">
+    <dmn:typeRef>string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_4DB63B48-25B1-448A-ADD9-56133CA55C87" name="Cabin Class" isCollection="false">
+    <dmn:typeRef>string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_11FAD864-9501-41BD-91BC-3B64A1E06486" name="Trip Type" isCollection="false">
+    <dmn:typeRef>string</dmn:typeRef>
+    <dmn:allowedValues kie:constraintType="enumeration" id="_EC0605F1-9B49-488E-BCD4-C84780A3D8BA">
+      <dmn:text>"OW", "RT", "MC"</dmn:text>
+    </dmn:allowedValues>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_E1890672-96C9-44E3-9B1A-0E514FD46D06" name="RBD" isCollection="false">
+    <dmn:typeRef>string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_9CBB1D51-3E5E-4581-8CF6-AF6E24C9D935" name="Airport Code" isCollection="false">
+    <dmn:typeRef>string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_CFD484B5-513D-46FE-8389-EA55D8908AAC" name="Amount" isCollection="false">
+    <dmn:typeRef>number</dmn:typeRef>
+    <dmn:allowedValues kie:constraintType="range" id="_1103CA1B-BA14-46D7-B399-B91C8F5E1824">
+      <dmn:text>[0..999999]</dmn:text>
+    </dmn:allowedValues>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_8F70C454-B9B1-488C-BC2F-1E810291DEE5" name="Service" isCollection="false">
+    <dmn:typeRef>string</dmn:typeRef>
+    <dmn:allowedValues kie:constraintType="enumeration" id="_0BAF8C16-706D-4902-A8B5-D2A6842A05B5">
+      <dmn:text>"Air", "Hotel"</dmn:text>
+    </dmn:allowedValues>
+  </dmn:itemDefinition>
+  <dmn:inputData id="_E05602D1-1C40-4C7B-9461-CA7D21047BFC" name="Supplier">
+    <dmn:extensionElements/>
+    <dmn:variable id="_86C63CC2-5B15-461E-BCC9-5F7261F1DD04" name="Supplier" typeRef="Supplier"/>
+  </dmn:inputData>
+  <dmn:decision id="_72DFBC92-82CB-4544-A25F-E2CED29497B6" name="Markup">
+    <dmn:extensionElements/>
+    <dmn:variable id="_E056EA21-897B-43D6-B592-E612A96D91A9" name="Markup" typeRef="Any"/>
+    <dmn:informationRequirement id="_E9FE3DA8-265C-4F1E-A310-DB5537070E36">
+      <dmn:requiredInput href="#_E05602D1-1C40-4C7B-9461-CA7D21047BFC"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_F5768F93-80ED-44B4-93AA-318950ABC50E">
+      <dmn:requiredInput href="#_9D8B056C-3F58-489C-98C5-8CA81DF3B79F"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_E2222A67-F583-4CD8-8EFC-73B145FCD4E6">
+      <dmn:requiredInput href="#_83B65D26-FDC0-4F0B-AEA3-534A75A6A824"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_ACBE999F-8DA7-4542-947B-5A4412357BB6">
+      <dmn:requiredInput href="#_129857BD-09E7-4983-BACF-FB747EE0B7C1"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_5358AD2D-C795-4CB7-848A-79C4C4C882F0">
+      <dmn:requiredInput href="#_218F02DB-B908-43CA-AC5F-40C10A2DA445"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_87CF2E45-BF5C-4630-9CBF-B112BC5784B4">
+      <dmn:requiredInput href="#_75D7CEDA-8813-44FA-A0FB-98DD8E31DDFE"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_4280DBD5-3688-4A36-9957-132504801148">
+      <dmn:requiredInput href="#_91AC4091-A00E-4EE4-A96A-477B4CD89957"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_113D74E7-6D8C-419E-96DB-ADF59A688BA8">
+      <dmn:requiredInput href="#_11C97A11-ADF6-49CE-B098-B33F921B77DA"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_1DDE5B7B-1D96-4299-849A-3822B7E81971">
+      <dmn:requiredInput href="#_E4A941CE-D716-45A9-87C6-AF29BD5FA23D"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_685E1465-54D7-4949-87F0-868F061D11E4">
+      <dmn:requiredInput href="#_548F7BDF-817E-4010-98A8-E5BEA0FD929F"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_E52B853D-1455-490B-A2FC-4DDBD8929FF8">
+      <dmn:requiredInput href="#_3925DC95-AA86-4411-891C-71ABFAF759D9"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_5769663D-B969-4AEC-A943-10B12206FE41">
+      <dmn:requiredInput href="#_F62A58A7-731A-4DFD-835F-689AB74B51C1"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_5864A474-AB2F-48AE-838F-FC4A427E73F7">
+      <dmn:requiredInput href="#_6AA8F54C-B9E3-4280-A499-A3576F84C66E"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_3779883B-F2CA-4757-9C08-50A058ADE880">
+      <dmn:requiredInput href="#_92852862-45AC-4E9E-A3C4-12B6BCFD1105"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_CFE085E8-8666-4717-B663-52F1A67BF267">
+      <dmn:requiredInput href="#_10069CDD-28D9-45A8-8ACB-4DB6B2E32847"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_9B33EE3C-14FA-4765-999B-54D70BDD9C64">
+      <dmn:requiredInput href="#_C7ACD61A-6A92-4D68-984D-285A57ECFDAE"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_C623AAB2-FA1D-4373-A08B-ECD11A2095C0">
+      <dmn:requiredInput href="#_76C7783D-EAA7-4D34-9339-0B68EC2C89E2"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_3D0EDF87-D284-45AD-80A7-1DE1C9CFC213">
+      <dmn:requiredInput href="#_C6F5CF93-7043-4520-A79E-A2CEC42054C8"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_C44137B5-7B10-4394-AF15-39B3F11FDFD6">
+      <dmn:requiredInput href="#_8D8C44C0-357B-43E4-9B8A-FE0A74696994"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_74B7B420-A31A-46FF-B2AB-3EEB53ADA033">
+      <dmn:requiredInput href="#_4FB63DE2-5CC1-4D17-875F-D1CFB565CFA3"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_0AA8FA9E-F109-4AFD-AA59-28B5809DD38E">
+      <dmn:requiredInput href="#_4748732D-6962-4AC9-8083-542D5FCC0846"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_4D44AFAE-5B82-4A8D-933C-A8C1D8407F20" hitPolicy="RULE ORDER" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_CAA4918C-1E95-4078-BD01-28C24AB86E78">
+        <dmn:inputExpression id="_C6B0B19B-561E-45A6-A1B6-7F795351547B" typeRef="string">
+          <dmn:text>Rule Category</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_46C166F2-FE8F-4BEB-BBB3-D3F9BA3FE3EE">
+        <dmn:inputExpression id="_CA4030B8-8CC2-45FF-B960-2239DAE20082" typeRef="boolean">
+          <dmn:text>Enabled</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_023FE9A9-B6C1-44A4-BCFB-03E56ECB8D08">
+        <dmn:inputExpression id="_CF34E53A-154E-4886-8605-670E30DBE0C2" typeRef="Service">
+          <dmn:text>Service</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_0D2391DF-5CCC-4815-A8A3-11AF4060588C">
+        <dmn:inputExpression id="_7AC8505F-E613-4483-8CA0-6D0F1F858F15" typeRef="Supplier">
+          <dmn:text>Supplier</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_68D0CCA9-76E4-4B55-871A-8F5D913B0751">
+        <dmn:inputExpression id="_DC247267-BE97-45D8-8047-BE7A7D41FD1D" typeRef="string">
+          <dmn:text>Office ID</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_D6CE9470-9941-4438-BFCC-C06C981FBC2C">
+        <dmn:inputExpression id="_925D0DCA-3CE2-4352-859C-68738D21114C" typeRef="string">
+          <dmn:text>Booking PCC</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_D9BF2A17-93AC-47D6-AC79-5E26E578BB8C">
+        <dmn:inputExpression id="_9154C082-F9FD-4275-883D-D841A514A697" typeRef="Trip Type">
+          <dmn:text>Trip Type</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_2FC5272D-FA12-4457-BDED-E01B225EEC04">
+        <dmn:inputExpression id="_A6681B02-C619-45F6-9390-CE883DEF03D2" typeRef="Air Line">
+          <dmn:text>Operating Airline</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_4A626FB5-11FA-4156-9F66-441BE29CF2D2">
+        <dmn:inputExpression id="_ADB3AEFE-CE5A-4F14-AB50-36BBDE997F82" typeRef="Air Line">
+          <dmn:text>Marketing Airline</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_A2361827-0170-4A72-A06E-9B7E05B22CC1">
+        <dmn:inputExpression id="_96743AB0-A772-4876-B064-95DA03954A19" typeRef="Air Line">
+          <dmn:text>Validating Airline</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_D7EA9E51-5412-4EB5-A7FF-28F9AC3297A9">
+        <dmn:inputExpression id="_38D20C78-189F-4584-909F-FB110EC65F93" typeRef="Airport Code">
+          <dmn:text>Origin</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_12297C13-6371-418F-8A2C-98C9EA972C8E">
+        <dmn:inputExpression id="_38A86348-356D-45B4-B542-E631519DA4FA" typeRef="Airport Code">
+          <dmn:text>Destination</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_A7BD3240-07A2-48F4-957B-1C95682F75AF">
+        <dmn:inputExpression id="_2CBF2963-6F8B-46E3-BC8B-D51BA6AF6BDA" typeRef="Pax Type">
+          <dmn:text>Pax Type</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_C907073B-DBC9-48DE-955F-32E1A0F7E9BB">
+        <dmn:inputExpression id="_096F5459-9CEE-4499-A1F6-5246D1D262F3" typeRef="Cabin Class">
+          <dmn:text>Cabin Class</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_88EEA5D8-64C4-49D3-BFEC-8500504A7C9A">
+        <dmn:inputExpression id="_C60445FA-35EB-464F-A9B8-5FEA814BCD1C" typeRef="RBD">
+          <dmn:text>RBD</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_E78EF504-EEDF-4E42-99D6-5031F1D65567">
+        <dmn:inputExpression id="_C82BA19A-2DC9-4C60-B510-4676536EF40B" typeRef="date">
+          <dmn:text>Travel Date</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_D71A4786-6DBC-43F7-BC8B-5F88CBC6E2A4">
+        <dmn:inputExpression id="_C09D76B6-203E-4FDD-BA4C-DFC5AEC88A96" typeRef="date">
+          <dmn:text>Booking Date</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_AFAA4CF8-E97C-42EB-BCA7-AC611F447A22">
+        <dmn:inputExpression id="_84F1EC4B-D05F-4AC9-BBEB-EE08CF13CC50" typeRef="string">
+          <dmn:text>Fare Basis</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_EFBCB95C-95E0-443D-856A-AE71711DF0AD">
+        <dmn:inputExpression id="_05B3BD9E-97D0-415F-B6C2-F0DE50C2814C" typeRef="string">
+          <dmn:text>DealCode</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_522E79B6-C4D5-4069-9FD3-55BA097C993B">
+        <dmn:inputExpression id="_8EDA04CD-8F09-4574-B8AC-9854B3AE65EA" typeRef="Amount">
+          <dmn:text>Base Fare</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_9FB09304-6F24-4151-90DF-BF674341ED69" name="Markup Value" typeRef="number"/>
+      <dmn:output id="_7592DA70-85FA-4162-83A5-9EB8BB861D48" name="Markup Percentage" typeRef="number"/>
+      <dmn:output id="_B8A2D838-66BE-445C-89D0-9590F68B3472" name="Apply on Total Fare" typeRef="boolean"/>
+      <dmn:output id="_F4F4746D-406A-4B3F-B76A-0D5829314A1B" name="Apply on Pax" typeRef="string"/>
+      <dmn:output id="_7571B958-EA14-48BF-8C71-09218C130E36" name="Cumulative" typeRef="boolean"/>
+      <dmn:output id="_5A8DD7F1-3587-4262-A66C-447AD5AE5E43" name="Markup Type" typeRef="string"/>
+      <dmn:output id="_550D1467-AC45-4FBB-B53D-DE817121B71E" name="Id" typeRef="number"/>
+      <dmn:annotation name="comments"/>
+      <dmn:rule id="_C159F650-DCD9-48F7-850D-43E7BB919B0F">
+        <dmn:inputEntry id="_B55ABD7F-17C5-4EAD-9CAA-A1D9819EC0EE">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_15ECA102-D2E2-4E96-9B92-08AAE599F5A3">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D6E00AC7-76E2-4ED2-B95E-D2A292398741">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_60DDB72F-E980-4B69-AE24-ED885699E476">
+          <dmn:text>"ER"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4AF7FC11-36AF-4D5D-8031-8C8D8837FF83">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4AFAC10A-B9FA-4D41-9FC8-54A1686DF741">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_98CCD190-7267-496F-B2EB-D6C141698133">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D8680D02-9A2D-4CBE-B88C-8981222187E0">
+          <dmn:text>"ER"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E085792A-C9D3-4B77-A459-47D7D5937E7C">
+          <dmn:text>"ER"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B892154D-D2AD-47FC-B5FE-BCA6802257A9">
+          <dmn:text>"ER"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_114AC0FA-6E8E-4D4B-9A7D-27A4C91CC593">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C33FE07A-E6AB-467E-A175-0A4D44953665">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8809FD7B-4496-404A-98CF-C40268F25C93">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A23699C5-64F9-44A3-8EB0-F623FBE944EB">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1BF47B79-5F11-4FCD-BDAD-C6588E4E2E96">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BC72AB3D-7FB9-4295-8672-71A4D2B292BA">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_19D43B46-F857-491C-BEBE-7B398B6F5C41">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F7EA7697-B04F-465B-BCC5-99877DD3EE36">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4A17DFF3-F2D2-464F-85F5-35AEEEB25E6F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D71BB5F0-7AB1-425B-89E2-FA31EB230624">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_69AE25E8-443E-42E8-96C5-A0663BA22B46">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_2F3C3D05-0DC8-4C28-A246-91B8E0C890E7">
+          <dmn:text>7</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_DC0C188A-E920-4162-A0BD-F1D4EE896C9F">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_B71C9EEB-F65A-46C0-BFF4-E735F1651932">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_8209778E-90F8-443A-9EC2-6276526C5CDE">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_8C056E46-B5BB-4781-976F-95221253E912">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_F7A40BC1-D8ED-49F5-8E18-6F3A05DE1733">
+          <dmn:text>1</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>ER-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_08D3DCE0-1582-40E7-8C4B-5D172206EC80">
+        <dmn:inputEntry id="_C56957E0-AA69-4D13-85A2-CB583DB63A27">
+          <dmn:text>"CAT-01"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3DFF5828-B19E-4E2A-91DA-692C76EF8AD6">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2C41817F-4078-4D8B-83FA-075055A3BDE2">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E65D3D0E-117C-43EF-AB09-142F8A56CF5B">
+          <dmn:text>"ER"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D8DBFFA2-63D7-4A86-B109-BEC072517F59">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C65A0A89-D742-4A8E-9762-E78DB8998251">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5765CA03-C6D6-4230-A24F-80205FBE7A34">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_020CD801-E9CC-42A9-8195-12FFDF0D5EEA">
+          <dmn:text>"ER"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C47E2D3E-9E19-495A-B212-A0021B80BD3F">
+          <dmn:text>"ER"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_61CC7B4C-164F-447B-8470-D49CB97F1965">
+          <dmn:text>"ER"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E2386A25-DB8D-46B9-A775-D0DD3F937ED6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F97C3261-E5C3-49B0-9B5F-3A807CC65F48">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1270516A-E9BE-4280-A927-4AD03B829C36">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1C3ED75E-3D82-488E-9013-3C004B4D69CC">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_112C10DF-5AB8-4271-A8C2-922EA03188A6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_388E20D9-AC40-4015-82A5-2A6E36365079">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CCFA52EB-95E9-4FA5-8498-CDB0CD92B971">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4B6FAC34-4CBE-4EE7-BB9F-6BB3E531C650">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_58E82A45-5251-4C37-8A84-1B8AE7D7236F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C74AF9F8-C186-40A6-AFA1-B70B8D8DCDB6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_EF682846-35B1-4D3E-AF5F-02286802DDCD">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_BA9700D3-4E1F-4F40-A160-78B4923A93B5">
+          <dmn:text>7</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_746E0A19-B4C8-4F7F-9B4B-37B38BFF1057">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_5EC23D2B-4C9E-496A-B04D-A9CE69D1DE7F">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_9E82E5B3-A529-4F6F-AD7A-EC0E140D7FC8">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_277C5425-C132-4322-A02F-6CE28F9AE530">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_60262299-E91D-4D86-83DE-981BFC39B2CA">
+          <dmn:text>2</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>ER-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_488B547A-5481-4CC8-840B-18293B013272">
+        <dmn:inputEntry id="_90996F4E-057B-4D86-A7D3-9E7080A5FB61">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8E6A9B2F-3D23-43B0-8743-12CD57391204">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_97B03EF1-8C10-4CD3-A173-A146A25FB0E7">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_31ED3519-C3E7-43D5-8B4F-5DBF85D9ACFE">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E4B856AF-4BEA-4F3A-8EBA-91C5F7C34DE9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F25FEF8E-06CD-4502-9114-28594AAD97C9">
+          <dmn:text>"71NF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2F57C7FE-34D8-4FB6-9010-5B99C39907C5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B6CC606E-39BF-4963-A49A-2B3505CA580B">
+          <dmn:text>"UL"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1C2EB6AD-337E-4575-8BC6-C2D757D1B316">
+          <dmn:text>"UL"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_847F66D8-66FE-4149-A384-DA6480BC756B">
+          <dmn:text>"UL"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5F60B660-9128-4250-A358-3EA70092875F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A2A2C61D-3C30-443E-BFAF-98360D390993">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0A0F07E6-FF85-4414-A038-602CAE516427">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B8DAA87B-7B9C-4DAE-8B45-3DB48BDCDECC">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A88443C4-67B0-403F-8E9C-E1385C8AE8F1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2C029C61-9684-404D-80E7-4DE93B57FF0B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_ECE07838-BC7D-42C0-993E-DBFF66421D7E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F8B2786B-E494-4BF1-AE41-DEA99823002B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C8B626E6-00CD-4736-AFB3-A70B30182F2F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FBD95F8F-2ED1-46C6-87C8-FE4B1B302C5C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_BAC7D005-BA90-4EDF-AC28-BDC73225899B">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_D4680D0E-2CC9-412E-A8CB-125392A1B71B">
+          <dmn:text>4</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_5859D674-8568-4488-9F3D-DE8496FB283B">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_BABBF04D-8FA5-4256-A05C-6260A330C688">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_E54C5E62-C43F-4930-8338-9FA4B0CB0693">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_AA6A6D95-D767-4D96-965B-5A45C0825AA9">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_17521B91-9696-47A2-B85E-7E704741D8FD">
+          <dmn:text>3</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>UL-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_BD34048C-5E3A-4266-8EF6-94F8C2D2ADC9">
+        <dmn:inputEntry id="_8F09C196-7C45-4814-8E46-36E624225155">
+          <dmn:text>"CAT-01"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_54EFFA68-D406-4CDE-950F-2FA7BF63B8BD">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C798436F-B690-45D7-9258-97EF7A11ECDF">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7EAEB7DB-087B-427B-BE42-A9D1CD51D5B6">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DF1862D2-7ADF-4875-94DC-B17E11AA4D97">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C52FE009-20A8-4C24-A167-CAEAD30F86D8">
+          <dmn:text>"71NF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_53F98D03-A28C-4D93-A558-58538A5C6834">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CFA158EC-8DA7-4ACC-A175-6773261416B5">
+          <dmn:text>"UL"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F0C63B38-66A6-46B6-8AEA-67769718441A">
+          <dmn:text>"UL"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_39EC6FF2-8BE6-407B-B101-FF80F3E0F2C7">
+          <dmn:text>"UL"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_10E11F1A-9B25-444D-8E5C-72014DC3BA98">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2AE3A4E4-CAE2-48D8-88B7-6CD7B7E2A7A7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1AA46E42-9FA3-47AC-8898-FF0E04CCE683">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FF40FE82-5B3D-445D-9AD8-8DCA14E12081">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_66033302-CC18-46E4-960C-8DD3E49CE714">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D9885E77-D885-42EF-BD33-ED1FB2ACD7A6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F0898FF3-AD82-4C21-9046-6A9413DA1AFD">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_58E05A1E-3557-4F32-A476-708082FC3161">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1B4B41F9-AA37-421D-8C5E-5DF42BA8BA69">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_94A3F824-F0E6-4173-A2B9-05F3F2B10EAB">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_286F6B79-1793-4BBA-9920-E34892F80F56">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_4660B3F0-7E76-4561-A972-60B56795A92D">
+          <dmn:text>4</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_BE7C0A70-6717-424A-9982-2E2F71B443E7">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_D92953BA-816D-4971-A5D4-209E737F109B">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_1112FE72-7877-4916-B322-EA4DB452C32D">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_EF2FDF96-D0C6-4B8B-830D-A7AEC98DB9FD">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_9E1A42A2-6D4F-4EE7-99B6-A04FF049C274">
+          <dmn:text>4</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>UL-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_DDF4BE01-67E2-4B1C-AC66-001649055AE9">
+        <dmn:inputEntry id="_C6C96EC9-E9C3-4219-A375-A8A8EFD91349">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AB141E39-980C-4F21-8BCB-44E09BF6CE6C">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AA963E9A-3B3E-4700-9D6C-8483AEC2DAE2">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C181084A-7754-4C18-B599-784F23790F97">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1FC406F2-3C23-4005-9118-F3B71139A131">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D2EB5678-C06D-448A-ABA7-4FC21C273E63">
+          <dmn:text>"7JT4"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4FAD9296-A06D-44AF-9D19-C5B99FE11FA7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3DBAE81F-1CFC-4D40-A7CA-94F5C74111A0">
+          <dmn:text>"BS"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A77A6204-05DE-4E68-BF97-74B624E8B6E0">
+          <dmn:text>"BS"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2CF046A5-15CB-4B55-98AC-6A9AC7D5A311">
+          <dmn:text>"BS"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5B1DEE27-13BE-4B4D-9255-EA84044BA3E4">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BEC5950B-57D0-4380-92B3-6FB3DD32CF9E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AE1866B3-F91B-4863-B3E8-2F814560BCFD">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A59B8A95-18E9-4CFD-BF13-919577C94C2F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_18971E02-638A-4A12-96E8-17F5BC31EFAB">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DA380321-4D53-4787-9C17-F9A63D913CE9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_63D8082F-1D4B-4E94-9894-E5B87B3FCA9B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D09E1581-2785-4449-B091-A63E8F105442">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F695D448-2F0F-4A84-B0C2-F5F8C79E5E9E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CC5E041A-5474-445B-8EE6-CAF96E9119F6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_355F41AC-EC68-48D7-BBD7-F64FB94C9CE2">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_4B676D28-F6A0-4F34-BD1F-2B74B9EE8F39">
+          <dmn:text>5</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_F2168BAF-3983-43B3-B4AA-D8980B2A3A2E">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_40B6999E-0EFD-47C0-B5D3-9A5EAEE0F0F9">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_9CEE1C15-4C30-4014-809E-B1C53D72C667">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_BF709949-7C74-4C8A-9AA6-6DB831071FDA">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_141E1AE4-9680-446E-9899-51F24594AFA9">
+          <dmn:text>5</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>BS-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_B0E9956E-7D35-4609-9548-B48461905E07">
+        <dmn:inputEntry id="_531DB5D8-1571-4FA3-8E7B-EB2E6DB13D36">
+          <dmn:text>"CAT-01"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_366127F2-67A3-44D6-9BE1-970E61B28051">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_82CFD65C-9AB4-4864-BD59-D4146AD0A556">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F2C96FE3-3C27-42F0-BA81-5642DD28DDCA">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5C2DA7CE-D95E-4089-9697-4E71FA6957B4">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3E3BAC54-7D3B-4432-AA83-6358FA038857">
+          <dmn:text>"7JT4"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5372518E-DEF7-4327-8695-D8A329FCDE04">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_50015ED9-F343-433D-A03A-875DBD152C4E">
+          <dmn:text>"BS"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_06CCD212-0F36-47DB-B2D7-7D8B1D5FB4A2">
+          <dmn:text>"BS"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DDCE5CD7-F546-442F-A577-F8E76A3BBBAF">
+          <dmn:text>"BS"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5347F982-968E-4D48-B7B9-0430FF27A9F3">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0942B0A8-E377-40FD-A8B1-51F4A5486EC9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_30BA2AC9-8868-4BB1-A9F9-8957F5580053">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FEB23CE6-6A0D-46FF-9DA1-2ED00F146FFC">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_72F6F6AA-A92F-4142-AE50-0D5D526E2DDB">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2BE44BEC-3D07-4658-8152-75EF54439136">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_15F8B2A6-18D1-46DB-BC70-08AB0CB2F247">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_826BBAE8-DE1C-4800-873D-C94A75B82E9B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FC8AD16F-A48F-4468-A4F6-EE6DAF787A81">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1871A38D-683C-4534-AAEA-F5AE61A8BEC5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_A2978987-F2DD-4A3B-91F1-8A3BBF178D32">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_509CB9D2-7479-4A91-9A28-E0FF1CB3C24F">
+          <dmn:text>5</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_C06D4262-5124-4F2D-8BCF-7487B58594F8">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_8E5941D9-F0D5-4CCA-9344-301A8A171695">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_0236DF97-80D7-461D-99E2-148A0AACFEAE">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_B2A142FA-FD8E-45AA-920A-D1D5B5A46C28">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_B4AF571E-40E7-40B7-8915-28AADF641349">
+          <dmn:text>6</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>BS-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_655286FC-0AEA-4F1E-BBCF-004FB31A4CDB">
+        <dmn:inputEntry id="_0D58BCE3-ADF0-4099-A47B-43B420FB0542">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D0AFFADC-4D8F-455F-B2A8-FE2ACE83CB91">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5A1AFE3E-23DD-4A60-A691-C9A4FB5D12AE">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EF79728F-639E-486B-9B4E-055FEFB0DADA">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DB131E50-21FA-4497-9509-F02AF7BE1AEE">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8FB2C3A0-77FB-448D-9A5F-96A598385F79">
+          <dmn:text>"71NF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3F0F753A-7D52-4F9B-BBC0-F215F863559F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9FBD1206-DDAC-433E-A3CC-3D457720E66D">
+          <dmn:text>"OD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6510214E-7552-4CD9-B8C0-03A01E94E996">
+          <dmn:text>"OD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_671A7AE5-7CA8-45EA-A73D-A6BB695EEFEA">
+          <dmn:text>"OD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AB0975B6-EC14-414D-B81C-527D324EC6F9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EE3AFEFB-070A-427C-9D51-79B55C20B1BB">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3A838839-1229-4FC2-81FB-7F53365889AF">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_836B4D93-0213-4DB7-B8A7-DBE1E7E8EC00">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D9F5A5BD-94C3-4079-A0B7-BCE66746B1C9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_012C606B-2656-4AF5-9B37-F812CBCD37E1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5D0C8B1F-9BF6-4E7A-B5BF-698BED97252A">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A5406409-AD0F-4FC5-B6A2-C6DBD06DB50F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B8228BC0-A5C4-4C4D-926E-EA30A2C7E15F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DBB2B5F6-4047-4DCB-ADB1-13029BD6811C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_5CFB6F2F-BCE1-42FA-AA5D-77CEB19556AB">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_DBBB61BC-44D6-4C66-A725-40168CDB163D">
+          <dmn:text>2.5</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_D774D1C3-0AB2-4C9C-B3C4-73B99776F567">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_934A8B7D-00D7-4F8E-ABA6-3CF366B5FA91">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_C910FA43-2172-4FF2-9B6B-690BB166C2D8">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_8F64EB49-3799-4129-B65B-2906FE1234CA">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_C43AF709-2CD4-431F-8AE3-BA56B12C252E">
+          <dmn:text>7</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>OD-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_7B85716A-D5C5-4683-828D-4220A34B45E9">
+        <dmn:inputEntry id="_E1A7F6E4-E85F-46AF-B197-3291942C051E">
+          <dmn:text>"CAT-01"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1259D5B4-5702-4052-ACFE-B045F7B57343">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4B31E262-5110-49E8-B3BA-6DA418F4CE29">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7922A5A9-7BF3-40A7-9E6E-DCE9315EEA3F">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E9C8E243-53F4-4B33-8176-F010935D22AE">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_31AB9675-4BBA-4E39-819D-FFA32C65CEF9">
+          <dmn:text>"71NF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DAD2E8C5-4D48-46FB-9963-BCB2D6E250BE">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E4FBE0F0-FF5B-41CE-BAC1-DED8D90AF826">
+          <dmn:text>"OD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_75A30A36-D74D-4FF4-BFB6-FC35ED25986F">
+          <dmn:text>"OD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_954A0F34-EF3E-491C-B509-FB1B933AB498">
+          <dmn:text>"OD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_59174C01-54D1-47A4-9DEB-AF8928848DAC">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AF74D999-4B37-4B6F-BFF8-2ECFEC66D33E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9B1459F7-4AF0-4E5E-803F-6AC3A136719D">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3CD61116-3AE5-47DC-B7A1-FE6D7BF3DBD7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_57B87D70-581F-436C-A738-A5EC639CCA1C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CF17A212-5496-444E-879C-A8DDE07006D0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9924DDD3-64B0-45AE-8658-48F074D31654">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0C19E626-8D52-4859-8D3E-02BC50463403">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_12E5BC41-7EA2-4307-AFC6-A7473527E61C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B8FEAE81-7D24-4C65-8D2F-D45A7D689BED">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_507DC06A-76E5-497A-B28A-F60CB5920765">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_9D9123D9-2156-44D4-B00C-AD8D30DCEF59">
+          <dmn:text>2.5</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_18966B31-6A9E-40DA-BC1F-58BF023A9B08">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_1D856513-BC28-413F-B3FD-89BBC687335F">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_07EF03AA-B027-4EAB-A40E-2525FDD1806F">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_6BE93C65-320F-4A29-B8A4-42FCD81A004A">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_2EEBC770-A2C1-4063-993A-843C98919DAB">
+          <dmn:text>8</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>OD-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_1507EB4A-1EC1-4C0E-82C0-292036391B8C">
+        <dmn:inputEntry id="_A7C1C49A-A546-4F35-9678-F20D5367CB3D">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_09E35544-89BA-42D5-81D6-625001614C2B">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5691B2DE-66C7-47F9-9D2E-30E968E113E3">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_53368755-7997-40A3-A0F6-62589578DFD8">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8E8AC9C4-501B-40BC-8E13-506AA9A73D72">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A0237B64-8681-4F25-B629-E41E880FBB95">
+          <dmn:text>"71NF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_91FCA541-AB08-47B6-9FA7-3E071460310E">
+          <dmn:text>"OW"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8DCBF934-D11F-4DAB-8E23-486CD7C23AAC">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_79045D7B-2B82-4A59-BB86-0509A18200C7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0B5A9B4F-C6E2-4DBF-BAB7-E5C61F6EDEF2">
+          <dmn:text>not( ? in ["PK","OD","6E"])</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1F7A4FBF-78E1-4421-A2C2-E98A234B91DD">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_990E9027-F7B2-465B-A119-9CA8889762E8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1A7AF10E-786F-4B9C-98CF-5F076F2750AD">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_827E02F3-67B5-4261-953E-BABDEB9BED49">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E11119CE-D1D9-4EF9-BA51-8CC21C901614">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_076208C1-374C-413A-915B-543F8FA789D5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5C504DEC-F33E-4EA0-BF4D-9D130F1BD7E9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8C3C22C8-88A2-49F0-B024-A286EDFFD71C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F859F30E-CEEB-4DC9-9F4B-9755B66DD8AF">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_69AF3CE1-E39B-4C0B-86EF-CD1975765364">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_0EF37A5F-D5C3-4080-9FDF-6EA619C2C5D7">
+          <dmn:text>5</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_C8A874B2-700B-4E5C-A7F4-4BBA8F134789">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_D71977DB-DD04-4A68-BA50-65A22934CF97">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_65832CF1-5E74-4159-A356-384AD12DB915">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_7068C22C-9623-483B-BC50-31F874F92493">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_9ED1BBA8-5AFE-4EA1-90F0-CF9FC00818EE">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_02E6D4B4-F563-4904-9A4F-B51351650298">
+          <dmn:text>9</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>GDS-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_20E0D9DE-6E56-4F9A-A224-4410F865B884">
+        <dmn:inputEntry id="_C741D9DB-B003-4324-8A12-A80C2BDDF6D8">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_78926201-B489-447D-ACE7-F70DC618C898">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CA8E9B5F-53B8-4505-BBC0-38BE6E7A6F56">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5E9895E4-97DD-4402-8C92-391025F5A73F">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B06F7B1B-B64D-4702-9F16-0FC44EF7FCB7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6AEC86B3-9068-4BA9-95AA-B1C3DE2D644B">
+          <dmn:text>"71NF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E5313A93-0954-4BD4-811B-38F9B1DA06CF">
+          <dmn:text>"RT", "MC"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5415022A-78D4-4528-8688-324BB92E6BF8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7096CFE2-8311-4C65-B8A5-5E227E8FD10C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_73B7BDA7-8A97-4494-AB1F-056AC3C14901">
+          <dmn:text>not( ? in ["PK","OD","6E"])</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_62ED221F-2DC5-41A0-BD30-7952D0BEEEB7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EA6A87CB-320E-45F2-B113-B0722A58B3C3">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F26ADDF8-6311-42C5-86BE-AD7C81C48AA2">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_27C08E26-CB81-4EF1-88F8-6BEC385CB1A3">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4BC29A3C-43D0-460A-B476-12C56529B389">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5BB0982C-9667-4DB9-9F6A-7E84296C1227">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_182B6988-9C6E-4B7A-AAB5-AA4B6FAE85FC">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5D2370B5-8AC9-4789-A606-9DE87F65A7CF">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_ACAD8B96-8AB9-433F-9E04-72BDFF3CEED7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BCAC3A98-323C-4D0D-8BEB-6C4B767954CF">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_478A4823-7807-4D3B-AB16-F8C38BA1F92C">
+          <dmn:text>10</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_6B74A742-04EA-4A97-863C-5FFE15FAFA54">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_A2949BC8-7653-48DE-A17A-EF856E4FEEEA">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_C0EB8670-A675-4CC1-934C-AE4DA48AEA41">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_7E30E6C9-C653-4439-A26D-417EF6B6F561">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_7756C1D0-3ED5-4C56-9E91-DFF3592C4FE1">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_264612EF-1360-414C-A6A3-0A0AA4D09C59">
+          <dmn:text>10</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>GDS-02</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_5E1D6D84-CB57-4E04-A1A8-3A90DC7539FA">
+        <dmn:inputEntry id="_C70BD798-2575-4C9B-9C15-296389E68ECB">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2FE3C81B-C046-47A3-AD26-6BE6EBD9184A">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2369C425-A416-4599-B23D-53A08BDD8263">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FA1653BA-3940-44EE-AB2F-B9AC74638434">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_47DD6976-FAFE-4ABA-88DF-F70A81A0F218">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FC1C9786-30F2-403F-9FE6-27DB05592B85">
+          <dmn:text>"71NF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_92BEE469-E5FF-4F71-AD30-A88294BCE6D1">
+          <dmn:text>"OW"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AC41E3AD-2AB1-4F98-BC7B-3486DCECB9DB">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AE161BCC-7988-4CA9-A62B-AB9B3E5D7732">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D29043FF-4343-44A2-9D44-10E21B3F64BE">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9FD11F45-3C55-4C99-A0D1-EC12EF090CAC">
+          <dmn:text>"DXB", "AUH", "SHJ"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_00D7858C-A081-445D-9972-0CD8C2154837">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_67505B31-1635-4C3F-8544-B52A5FEF8489">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FAC2E4A5-23BB-45D1-B08A-E9763B68CDB6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CE2193B0-10B0-4F62-90C4-6725D8AF87E6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_943C7BC2-1392-4CC6-9D56-D589923BF0F7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5DAC43B2-6E88-4D27-8FB9-9B116012CC07">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_53A7F0DC-F819-48AD-A4DC-454FC24794E0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A1DF7FC4-6F1A-4AC1-B8FD-DD9F9D8834CF">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6B9B69F9-A2F3-4EE8-AA90-956F9A5B82B7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_81603A71-B055-4451-9019-BCCC3DB1FDA3">
+          <dmn:text>8</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_3D449A14-27C9-45A8-AF87-8ACBDE96C30C">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_2B9E2F3C-3F1E-478A-87BB-0B9255A55B25">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_B0588D6E-9F57-4387-B4FF-93D91E1BCE2E">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_63840B54-6072-42AC-A0BC-380D4330FD5A">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_1267AA3E-5DCB-4A85-A11E-2B57A36F7ACA">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_13B18576-94B2-4491-82DC-60514BE7582F">
+          <dmn:text>11</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>GDS-05</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_1FD1E180-C8B3-487B-9DBB-861469C2BC31">
+        <dmn:inputEntry id="_DD080224-E3D8-49A1-BE97-0B674EA00B94">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FD556CF0-433A-4C1A-8339-61A94200A6C7">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A2EF79D1-EA0A-4D45-BCE0-4AE5DFCA15A5">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EB39C988-4F20-461C-A501-39B354AD8D4C">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4EF882C6-4EC8-4BCE-AA2D-40107314E5E4">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1648D739-479B-48A1-9024-A4945BC5BEDC">
+          <dmn:text>"71NF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CE0691DA-245C-4B22-A924-CE60F6E6BD96">
+          <dmn:text>"RT", "MC"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E08450EA-B481-4DFF-B3B4-BEAF79C92643">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_099054BD-443B-46C6-B799-B3205884BCF7">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B428F1D5-D33D-4376-A9DB-19CB465BCF27">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E7C8C2F1-8E78-4FB3-8000-2DB06894E444">
+          <dmn:text>"DXB", "AUH", "SHJ"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EED75864-6426-4B50-A8BA-19190960F318">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_593A06AA-4198-4EBE-8B96-31EB79E2A1DA">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6DE8D514-3767-4413-B55A-987CD4D549AA">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4007BE2C-1357-460D-932E-127FFD715D8D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E717C6C8-57AF-404E-84AA-882213C7F2D1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A8A6B46F-C0BD-48C2-9D1D-0A13393D3407">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C43EF7E4-8C94-4ED7-816D-C16E1738D86B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_94BEABDF-E065-4EF1-B727-C1572E565006">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A4C30967-556A-4A9C-B7A2-44CD8F10AFDB">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_02E18A73-3DEB-4F48-8D7D-178F190C8051">
+          <dmn:text>16</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_59194D7F-5FC9-4E80-B410-F355967F1D37">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_C2EAA21E-01A3-4D24-951C-2833E24188C6">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_5511B14A-D35A-4E3E-BA26-60539E578301">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_967666F2-EC01-49AC-9FC2-D01B6D10EA8B">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_7A0B5B7B-2531-4D1D-997E-AA0B68E808A3">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_3859C271-08F3-40AA-9B74-D196583E29D7">
+          <dmn:text>12</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>GDS-06</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_BEC810E6-4461-43B9-9A99-6A75FAF52D14">
+        <dmn:inputEntry id="_18F06DE9-B3E4-4070-940C-ABF2CF36ADDB">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_93D25BA2-BA02-46EC-AB02-045D1F40A00C">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B2C55C77-A6E9-4ED6-BD46-2C60D171E008">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8FE3A2D3-0A72-4C6E-8D4A-02299918DB87">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EE2DD024-34AF-465A-9382-27E5630E4AC3">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CFE6382B-AD72-4CFE-8175-D60FF5F1F3AB">
+          <dmn:text>"7JT4"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_573AD4D1-C57C-4A1D-A95A-3871C6AD41E5">
+          <dmn:text>"OW"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EDE7757E-14BC-4573-9869-4C39F3F36F29">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F902315F-31D5-422D-B89E-3FD856A0D0D5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BDA7F2B6-B582-4767-B69D-15D355AC3373">
+          <dmn:text>not( ? in ["PK","OD","6E"])</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BAEB2B25-FC3B-4345-A90A-CD0FFC213B5A">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1C8B3BC2-8C10-492B-B04D-23A88233E1CB">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F9E8963D-2371-4000-86D0-8BFB0DAAD8FC">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2BF9E86A-B7E4-417F-A8B5-70000132F276">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9C24117B-3BF8-4C82-B9D1-8B9B64CACB28">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_754DD69C-2180-4006-BED0-55213D85DEB9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_85C6F107-50E7-44EC-B9CE-4019C8596C50">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2B599DF2-0F13-4762-8907-400907F11597">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FEEA967F-EFD0-4062-B045-3EE3483B8ACC">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1FDFF954-F4F4-41B8-838D-D795AFE8EB8B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_58591C22-9405-4E05-9A5B-F3A85629B0B0">
+          <dmn:text>12</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_C0D0129A-CA29-4A91-A0CA-2E0835E0C896">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_C45DA571-05B5-4CC4-A64B-773CB8CB9AD4">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_A0B48C22-AD2F-474B-848B-D8E8836E49C1">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_66F66E61-CF3C-408B-9E1F-E5C173BD196F">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_1E9CDECB-3D91-4909-9987-E9C742895729">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_487DF97B-C967-476A-8D0F-5445AB265013">
+          <dmn:text>13</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>GDS-03</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_B1C38811-3801-47B2-B1B6-E3E338FD2EE6">
+        <dmn:inputEntry id="_CAD533DA-6BD1-43F5-B530-AEA6CA5F0291">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_26595F14-72A6-4A57-885B-0D379D0AAACE">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_70805EA4-262F-4508-B5B2-0E7AB319374C">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6C2611E5-4057-43D7-980D-502DCDE9C24B">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D51E7D62-5CF4-4018-AD68-E5A149FD5D82">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CD4697F1-7EE5-4377-BEBA-49557B4EE128">
+          <dmn:text>"7JT4"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7A11C95C-4A7F-4832-A2EB-3FC0770A9598">
+          <dmn:text>"RT", "MC"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CE1950F8-F6B1-4685-8D35-E7770761D93E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F6B14F68-5A5B-43D2-BE8F-ECBAD37B1DCA">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5BE457A5-2322-47CF-9714-EAFAC9D88FEA">
+          <dmn:text>not( ? in ["PK","OD","6E"])</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AD9B35BB-A327-4A67-922B-397F36C16574">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6B462CF0-CDE1-4519-8C51-27CB3B0C2AEA">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E478B74B-1AD1-4E11-9AEF-33F973B085EA">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_48126556-4BC9-40F7-AA43-6FE37E8B8AA8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AD885520-EF46-450C-AFC5-7CD741C47F60">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E7E55A7A-4CE9-4B86-A0BC-7AC6C77B0FDE">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_17CD49C1-A13B-4882-ABD8-E8BCDF67A716">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B5A18301-8D76-498C-ACC2-F26CA7457E6F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6A2F4CEE-24BC-4048-9D3C-3419C9FE5C9D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5FEC2C51-95FD-40A0-BBE3-A70038BBEFBD">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_1EDBDAAA-9D4E-4761-BF6C-0902BD1E1DC3">
+          <dmn:text>24</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_0A3671E0-AFEB-4AE3-BD75-87D5B87563CD">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_02ED9B61-AECF-4EA5-A000-A1E2F5F461FD">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_0984B2F0-2E37-4402-B131-AAC6785BF436">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_210DDB76-D2D4-478A-B784-A347BC52F886">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_78966252-12D9-4861-A2D3-4E51F3AF24F6">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_B2E7A9D9-92AB-4C95-B0C2-51404EF02294">
+          <dmn:text>14</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>GDS-04</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_65227462-BBE8-4D91-9ADB-7BF8665D00B0">
+        <dmn:inputEntry id="_04533EF9-2F30-40D4-B5FF-F7A612220E5A">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EB89D7BD-87C3-4375-B93A-879E5945B46F">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DFF3042A-A6FE-451D-BA03-4C763C3C526E">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0298BA3B-C7F5-490D-B980-FABE85658486">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_02DFB375-A65E-467B-9D33-AEE3FAA7FAB4">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E74C9BE6-4B2D-44ED-BEA3-E97995D12499">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F3F15132-E52D-4C26-9A88-8A30C5FB9BF7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_68892870-E19F-46D5-B2F1-E7EF7F94A22D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_832F22E3-7DE6-49A9-8E37-2A9301B1949E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_393C04E9-051B-4B52-8585-3F292C6F61EC">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C21DCDB0-0418-4143-9EC5-7D4ABD9EBB88">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_03AAACE2-DA1C-48A5-B2B3-04CE28CAF6F1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D7BB11EA-1C00-4FE3-851A-D30EBF6BF63E">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4D64A9A5-9B0D-4D13-AEB8-368C3A2394F6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DA5A6AC7-AE22-498C-8206-4A7256FDFCF0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_213C897B-817B-4EBD-A87F-07B99734C1E5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_959A5DD2-DF7A-4D58-9765-E2284B724462">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1B7C910D-C68B-4893-877A-B29FD3EC3707">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EBF24CE3-ADAF-4235-9A41-CBC495ED0E0D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A0E1B80C-369F-4867-BEC4-8D2FFD26D81F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_50830265-2B2D-4061-8322-A62C42BDF7D8">
+          <dmn:text>10</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_38FDD5CB-E836-4FA5-A125-46C2DBC96C6B">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_2EF31F5A-6594-4048-B829-F8B703EEF295">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_83603393-C7C6-41C3-B828-F0635633305A">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_FEB75825-BFD3-4307-A536-D169232B1367">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_A2CF7A16-0E09-4563-A78B-BCC2E02075CB">
+          <dmn:text>"Void"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_5C9D3CD8-8171-4BD9-A3FA-DC25B537A8E1">
+          <dmn:text>15</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>VOID CHARGES</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_B7AD992F-9E2F-4185-80DA-2818E812FD58">
+        <dmn:inputEntry id="_2F9D4D80-2F1B-41F2-8C3E-F55CF00CA6DF">
+          <dmn:text>"CAT-01"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_597DAD89-7AA8-4D9E-A0FD-F98FBC98D008">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F2869C13-8D52-4A93-A1B0-8C8C4950D056">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AE7CDF52-3159-4014-8C94-F695C3120869">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2A133982-A4B9-4B41-A307-348920329DC8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C64416AE-D0B0-415D-A757-A4D07A4EEF58">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6E14658D-240A-4E15-83D1-B4EAA6BE5F74">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D15AEC74-20C8-4115-838D-74D8C7FA21BF">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_04750438-E72D-42A8-8F76-8A1FA8C89398">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_789CEDAB-3CFA-4E5B-B0F7-AABE1985E80A">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C6040F57-9E1F-45D1-8D64-B0F334092369">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_086F732C-CED3-4E4C-9C72-E2AFBC8DD10B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_45ECDF85-D89A-4B14-952E-C89CE3918117">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D006E687-C24B-44BC-BFB2-A39A058EE104">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C96ACBB9-6F10-46B5-AB8B-59CD53B5FA85">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0A6E723C-EF65-4AEE-AB65-E6E3255AE990">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_801939C0-8F7F-4972-8588-CD9F350827B5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A3A82A83-9B04-41CC-9914-B062EF00203E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_571BEBFA-DC1D-43C6-9592-B68700A9656B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D7B8D53B-041A-47F7-B623-503BBA5F6855">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_36A32BAD-E537-4B48-BE68-AAFF35A338B5">
+          <dmn:text>10</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_7F4EF6E4-4C08-4D23-B45C-A35952E3640F">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_E1CFAC35-2731-4439-A6E6-0A20601E7035">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_981DAF25-69FC-47F4-B7FE-63807849E6A5">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_A0BC53AA-FAFA-4EBF-9C17-E838C221B62A">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_EA991181-F050-4E67-B80F-0A9BD414EB2A">
+          <dmn:text>"Void"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_95CB6272-1F88-4575-AACD-2A05F55D0337">
+          <dmn:text>16</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>VOID CHARGES</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_00CDC83A-3793-4066-9A8A-ECB3F3AC8B6B">
+        <dmn:inputEntry id="_2B1F84D8-A85C-42B8-87A3-53C1D8A1B04A">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5E3DDB1C-2AFC-4CA5-B06C-A3FBA14AF68C">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_51C6F4F6-A326-4F15-91AC-08FED9ADEAEE">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_89E1F051-5C59-4837-8DF3-0B26EC3C385E">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_14F4BCC1-C404-4C17-832A-91EDFF4D294C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E2C2A619-1CCD-4093-9EFB-28E8D30E0E86">
+          <dmn:text>"71NF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9866A131-9A57-4C51-B328-3EB06004DB50">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9FB4B431-819D-4188-BCE0-03232D1B1AB1">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3F9B6A9A-496F-4274-AE26-A972FE21D000">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_62089607-C78A-47CA-9025-0DF7AF3E9F7E">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_94F4DE35-E4D1-45D8-BFE1-9E600841F448">
+          <dmn:text>"DXB", "AUH", "SHJ"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F84C3CA8-E82A-41CB-B932-86C9726C0766">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_075E9A5F-31F4-4BC0-BB5E-031F12237A92">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5AB5A55D-B064-48A4-A2A4-9329EC87358E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_456212AC-F59E-4EF9-9C97-1315F1D16110">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0231E0B0-E50F-4835-8D9D-686DA207ECB5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C77A64AD-B801-4963-9AFB-4EEF9AD07B60">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A7E3729C-7259-4C0C-8FFC-4DE7C9D1561C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9123882E-EADC-45E1-8CD2-3CAF6EB6D8D0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F43493F0-DE06-4DA3-830C-125DDD02A8E0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_10D73F3E-1955-4AF6-A7D7-F85541E9EB86">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_6BB38F0D-6F77-46F2-8E0A-6FB1DC4C161D">
+          <dmn:text>3</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_5EF169A3-2A46-47B9-AD2E-50B957537B12">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_F1774E67-E868-4385-A494-3AC0D3764845">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_D70A6044-C38F-4531-916E-A1CB711EE7FA">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_578634FF-EB31-458C-8860-93E8BEC8EC0E">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_8118DF59-A9E7-42DE-8E40-BEF568210A42">
+          <dmn:text>17</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>PK-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_9ADBE105-79F8-4825-B61C-07DBAB2428C9">
+        <dmn:inputEntry id="_CCFA49BE-8570-4107-977C-B6D902B1A9AF">
+          <dmn:text>"CAT-01"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B1560BA5-CF4E-45D5-A9E3-489433894ADD">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_693DF305-DCC1-43D4-98AF-9E6147072FA9">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_95A06C1D-E142-48CD-AE45-C6930B387C2C">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_792B9EF5-4914-4832-B88C-C00D82178FDE">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_080FEE9F-8142-4D49-8B8A-1E9ACC9929C9">
+          <dmn:text>"71NF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EDB66BF0-DA41-4758-90C4-CCD4C8917830">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_40FF1218-50F2-4074-B702-0F7389375C73">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CA9156E2-5491-4AF6-BFE0-1B5749F84929">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EC67C37E-0049-409D-9E94-C3B527B80881">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6BAF1E3C-3A25-4B90-8D92-09FA1E8B4A83">
+          <dmn:text>"DXB", "AUH", "SHJ"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1ECFA847-85F0-4BD9-A9C8-7CEA8165766D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2E663F87-5D70-4036-B058-BC9579318A53">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_299C358A-1ACA-4369-893D-E23612E5E21E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3EA0E1D9-7673-4FBF-8E61-E72AEFAA3F98">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_382E4C0A-387D-4708-9402-9A7A7652FBBF">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5E0DCB11-6492-48CA-854B-D98AD55D1412">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7A850F83-1632-40C1-8D41-39D1AB6A914B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2F86A575-F247-4D6C-8158-FA70B33A00F8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_79CB392B-F2E2-4392-8CE0-01F2F367FED9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_D6C7DD5D-625B-41F2-85D6-42D73918B729">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_5A1ACF3C-C19D-49CA-BC56-99B63BC4D820">
+          <dmn:text>3</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_833744D7-5569-4963-9431-2637DC094946">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_0217D573-E5ED-485C-BF3A-2639CC3B3D0E">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_4282AF03-081B-45BC-B439-73CA64213742">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_DA075FBB-EF2E-4B57-A098-7FDD0E7C682B">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_023D7B65-243A-4BEE-A7DF-9CE04CC85E4F">
+          <dmn:text>18</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>PK-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_1D48C3B2-2074-42F6-B725-11682825C95A">
+        <dmn:inputEntry id="_E1073E60-FD0A-4056-A989-2B9D5F222538">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_87DC866A-E835-448B-8E24-74FBCB36E598">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_98775038-4A6D-4D18-9507-0B63C006FA69">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_18A45A05-114D-49BD-8907-7A4661602868">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1B1293E1-F638-4D4F-B3CC-2AE025A2E345">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_33B1C3D9-5945-456F-A4F6-52F69150CBCF">
+          <dmn:text>"71NF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F78F5165-5F9F-4075-B97C-08144B099335">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_45400F23-C036-4886-91E9-4C785578E397">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C3A16317-D204-4F8A-ABE7-4AD948C1933B">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E0ED4798-C621-4D74-9858-44894C12956B">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_47B56567-D71F-470E-96B4-1FE0FDDC3767">
+          <dmn:text>"PEW","ISB","SKT","LHE","KHI","LYP","MUX","UET","SKZ","KDU","GWD","RYK","GIL","TUK","CJL","SDT","BHV"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B185D93E-C06E-4885-B89A-82CCA6D2CB38">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3487B31D-16C9-45D2-B95F-CD36F6F2DBC0">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F83C40F1-1D4A-4334-A024-92EBD98F6A76">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CD18A4C8-9EDD-431C-8D7F-1A41F9D823E7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CE41CD14-66C4-4DD7-BF05-8FDD61A92FF5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C42E9578-6197-4169-BA64-6DC5CC4A2520">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_352912F1-0E11-4E8A-A5F4-C0B5286F9323">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D0B0E7B2-A73D-4E68-889B-AE93CE160F45">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B14ED34A-5007-468D-B759-21EBDB246E5B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_20D9024B-0D69-4789-9911-37438AF4CD45">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_7252EDF2-E2F3-47C9-9E9C-BEB9453018F0">
+          <dmn:text>1</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_6B50B456-36B5-4282-961F-8D1729A2A987">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_3EC00D35-4CBB-4831-8450-1517C4EFF713">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_D6FF9B48-DB69-4119-BC1C-C409DFCD3EF8">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_A92C63E5-A6FC-4458-AE5A-C186ABE511F2">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_C23778D3-BC19-40A2-9947-6975715BCA84">
+          <dmn:text>19</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>PK-02</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_49658122-72EE-4575-A813-CF5C10F90395">
+        <dmn:inputEntry id="_7B262D81-1A75-488B-98E0-05F34C7DF33D">
+          <dmn:text>"CAT-01"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EBDD19AA-FF56-48B0-8A77-5062D946D2DA">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DEFDC352-58F6-45A5-A07B-BFBADF3A9641">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AAEE408E-90FC-4391-AFDB-34C4C2EC2C95">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0400A9B0-680B-4712-91A5-BAF19AA50FA5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FBC6C2AC-8082-4874-B419-1ED86177EDCB">
+          <dmn:text>"71NF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6121C73B-6DBB-4AEE-9848-60F9F0152FC7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C696ABD0-77DC-4826-8A5B-25BC40DABF8D">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3A70BBD0-B6C3-4370-8578-1DBB530947E6">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B6765FD5-EFB3-49B1-B036-0A1220BBEB11">
+          <dmn:text>"PK"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CDFE0643-B6D3-4A09-99B0-C4C0D04DBB9F">
+          <dmn:text>"PEW","ISB","SKT","LHE","KHI","LYP","MUX","UET","SKZ","KDU","GWD","RYK","GIL","TUK","CJL","SDT","BHV"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D1698AB1-24CA-4EF8-92D6-073130EE158A">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B3BCD101-6D75-4EB9-9DD4-782A58FADE25">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_57DFFBCD-0858-450C-92D1-2E9C2FBD23D9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F04F4A61-8AB0-49DD-A722-5F5848FC847C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_158F7FAF-0FAF-410C-A563-7C67C0994342">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C70F32E9-47EF-415C-9F30-6797450AE389">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E7EE4610-2EB1-4FC9-8BD9-C715C1D6EBF5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_94D3FB91-2BE1-48E0-B6FF-4498E24B0B71">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FCA5B30B-D2A1-4D4C-BE05-3784C645D760">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_8EB5B0EA-5725-488A-8474-D587350DBE77">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_1D26ABE6-644A-45AE-AB05-EE18F10AB42A">
+          <dmn:text>1</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_7BDC5FB0-8AF2-451B-9A64-D1187A9B4612">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_B2595B93-4E62-4B60-A041-7284870C3B7F">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_328783B1-FD87-4690-BC6A-071460358336">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_0B6AFB96-654A-403F-89F3-8F6324A988CF">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_E448B07D-D73F-415F-AE7B-C5A181B6C7E3">
+          <dmn:text>20</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>PK-02</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_70C0C5C4-3613-42E0-B149-0F6A006EBE49">
+        <dmn:inputEntry id="_2392FD3A-C141-4946-BFB9-38617B0263F2">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EC9E33B8-DD99-4289-BA6E-DD01ECC155FB">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D195DA39-E6CB-4D91-AD06-75FDDE15F5AF">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D27015D1-3CC5-4C8A-97DF-F67F9690C4FD">
+          <dmn:text>"FZ"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7490849F-DDDC-419A-925C-D5AC31856AE8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C0FE4D8E-379C-4325-BEC6-4BB33FB376FA">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9C91A8C6-2014-4DD4-8840-5818793C37BA">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F6B22837-8C2C-48FB-8DE3-0810220B9D40">
+          <dmn:text>"FZ"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BA9AEACF-6725-4DB8-864E-257C98DFDE33">
+          <dmn:text>"FZ"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_65A4D3FD-5B59-4F8D-B368-87D27E05CDD7">
+          <dmn:text>"FZ"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BDEC7B25-BC35-426D-9930-921D4CC60E31">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F26A6874-9829-4138-BD79-065C273BA0A6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_03819437-85F1-48D0-B54C-EDD2768B557C">
+          <dmn:text>"ADT", "CHD", "INF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F38AB44B-90E0-422F-9117-D44DD4335FBB">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C749D215-17CC-4DB0-B8E7-356FD3571BE1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6E67FCCB-A9E8-4B37-A9D5-7D6935872FEB">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FCEBCE28-F224-47E4-8869-BA21280951D8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C381E1E2-F715-4A8C-8F70-5923AB3CCDD1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8086E7B3-1BCA-4385-9E57-4C7D6CD449F1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_75B9CE7A-DFE4-4541-8EDC-EB37835F3D20">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_C0D23ABC-0059-4827-BB99-3EE941ECC930">
+          <dmn:text>2</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_DA6764BE-5241-48B1-90B7-2E210597BE88">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_3201B2AD-2852-4B79-8F64-89E342C6BEE6">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_11398288-BD6A-4B31-81BF-CD042FFDED86">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_4B3E50CD-640B-4D4A-B09C-C425C6CD4396">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_28E740BB-6337-4F52-9184-28222917C28E">
+          <dmn:text>"Service Fee"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_0CAE110F-9917-4DAA-9AC4-EFDEBF8825A7">
+          <dmn:text>21</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>FZ-P1</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_23EBDF8F-33C4-45DB-AFFE-E889C6F3F48C">
+        <dmn:inputEntry id="_371BCF85-38C5-4FF2-917C-2CA468EE9AAC">
+          <dmn:text>"CAT-01"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CD6190DF-31E9-467C-B208-448C597F3D86">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8C77E90E-08D6-4303-AF4F-9FA960F048D2">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FDAB102F-5CD5-42F9-AF5C-C70E2965A7AD">
+          <dmn:text>"FZ"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_878637F1-FF66-46C8-A6F1-5E21CFCA6C4B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8E59EDC8-0BAE-4427-997F-3BD5227D0698">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AC37C754-999C-4C24-8EBE-A232A7192D8D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BD358F25-783D-455A-BEDB-5CF4FF83F282">
+          <dmn:text>"FZ"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_996257AF-4DB9-421C-876D-4A9CBAFF135E">
+          <dmn:text>"FZ"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A20F584E-3AA5-4CAF-9AC4-224A233CDB06">
+          <dmn:text>"FZ"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DAE73BE4-8E20-4A77-8592-B80E730A5A09">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8E817578-461D-4205-A121-EAEDA1D2FE50">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DE6549B4-96F3-41BC-B44C-C3E9F5A8A560">
+          <dmn:text>"ADT", "CHD", "INF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3708B3D9-16A3-4146-9B24-FAB439BB5098">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6E748BE1-229A-4BEB-9FF2-EC21B9D6D0C3">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6ED775A9-91FE-4EC9-9A84-05652C354F38">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_37E490C2-F752-4369-917A-B08D5B66E3B5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EBDAEE98-C37B-4ABC-8C46-0105951DB8D1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CD8A6C10-B2F3-4685-B735-5EE6E74DD246">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0B220534-06FA-4900-A5F6-15A1AE7B9CF7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_EDEC1A65-1400-450C-9FD1-9839762B42EE">
+          <dmn:text>2</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_50DC2F79-CBC4-49C0-887B-473F141B4BCE">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_F43EC30D-E93D-4882-841D-8F43878A6B0B">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_66D0986D-1949-4449-8D18-B311B3850795">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_20040D2C-AF7D-4CFE-B138-ABF91B668B8A">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_140E571E-EDC9-47A0-B440-0BBEFD8F5B55">
+          <dmn:text>"Service Fee"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_078C2C71-1707-4288-BF36-681AEABBDEB2">
+          <dmn:text>22</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>FZ-P1</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_069D3E2B-E11B-45AE-B080-BA9FD36D0803">
+        <dmn:inputEntry id="_0BDC7E08-188F-43E1-9002-5BF92C4DC619">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E4225EA9-2E50-4E94-8C96-812C0696366E">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_143D7139-47D7-46CC-8F5C-A85B992D2678">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2B71ED02-FD44-48F1-827C-681B9DC31D78">
+          <dmn:text>"G9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A254F2DC-3264-4EF1-AF91-D9650B71DF0C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2F1533BE-6781-4984-BDA6-AEBA02C6282C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_21BE95BB-F05A-4D38-8FC0-C3EECBB885AA">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F8830552-2DF8-48B3-BCB8-3FCC28BAB315">
+          <dmn:text>"G9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A062F855-C3D8-4B46-953B-B1A15BDFDC34">
+          <dmn:text>"G9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FB9D6C55-B492-4C7E-8984-A10008081A14">
+          <dmn:text>"G9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F6FE288F-8F04-4A57-BD80-CB0FAE608125">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FFD79BCD-48A9-4DE2-8617-4F19A170F23F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_86E94BF8-9A6E-4E98-A40F-C89B86EAB374">
+          <dmn:text>"ADT", "CHD", "INF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5EFA2981-46FD-4ECA-AD92-B3EEE4F6A542">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6F207E25-4733-4F0F-8AEB-A25164FB3D35">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3EE44F3E-24E5-4746-A99E-0FBD1A3FC64F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_52FE2B99-AA8F-4BC8-9317-F509442419E0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B79DD5A7-D9A7-4073-92BE-65AE9E75B86D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9F1FC07D-27FD-460A-BD89-23C7D2DF46F4">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_50AADF7F-66FA-4543-B092-D6040EA0ED68">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_DEBF5522-562A-4EDE-AA84-0CA3DF72CAD1">
+          <dmn:text>2</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_2118465A-97F2-4F85-BE0A-879B387E1AE4">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_1ACA2E2A-B0A9-4135-B0ED-C786854AA119">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_68E2A690-5326-4E04-B3F2-3DCE2A32FBB8">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_2C554B2F-70D0-4437-8DD5-298E0E072D08">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_986AAB83-2AB8-4ADE-A663-E0BC630BA41B">
+          <dmn:text>"Service Fee"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_4702BB62-CC0E-46F5-9F55-1FDAF475CEAF">
+          <dmn:text>23</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>G9-P1</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_BF04DED5-FCB6-4A00-9C2B-506E10168955">
+        <dmn:inputEntry id="_FEB2E6AB-2FE9-4B5E-AA4F-5F5BDFB7134B">
+          <dmn:text>"CAT-01"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BD49575A-1C2C-4A0F-A22A-AD93B56C9D1E">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_789C041B-4D2F-41B5-8E20-64D20BA17DEC">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5006B6D2-6C53-49D0-8F2F-6AAB073C5CBD">
+          <dmn:text>"G9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B2B5C13B-8E33-4AAF-8925-B61F570C8948">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_43654CD4-C787-4042-B8C1-9370DED5A5FE">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E24F06C9-1FC2-4D6F-BB09-A39D1571898F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7D9769D4-B2BA-46BC-A569-8ADCE4D6C858">
+          <dmn:text>"G9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_392F117C-005F-491F-BD78-25A7C97E3C99">
+          <dmn:text>"G9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C8A7BEBD-D6E7-4277-A50C-45B4FDE76E57">
+          <dmn:text>"G9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DB412B6F-E0A3-46E7-B24D-A255C2CF0440">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B870470F-3D0C-4B0A-BC1E-A339ACEF2A85">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_40469074-D980-4A09-8EDD-FD7656BDB4FD">
+          <dmn:text>"ADT", "CHD", "INF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_08DDA13B-41AF-4DE3-B487-A5868CF42630">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F468BE8B-6051-4330-9119-978C19B4B2D1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_48CCC221-BAA3-404F-BC88-70E61138369E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E7053E92-056C-4850-B8BF-553D75943C41">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_308A2F94-4B92-45FC-8C96-ED15928C5B0D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CA235278-6413-4048-8975-6BA2621BC963">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1580EC24-B974-4C6B-8D2A-7001812717E7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_2A461C54-E2ED-4D67-A0C7-3E8D41CB996A">
+          <dmn:text>2</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_EE5B7EC4-E359-421D-82BE-22B253AC9FCE">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_AB06FB0D-8A38-4C8B-8E9A-7CE77ACA1CF9">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_4D96B3CE-8827-4210-B4F2-8D4A0331A0E1">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_D4A75BC5-F160-4E40-8CDA-ADB1E523D288">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_162A50E7-4215-45B8-BFFA-19414352D27B">
+          <dmn:text>"Service Fee"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_2B20B4BA-F3C1-4020-A460-13E1EE5F968A">
+          <dmn:text>24</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>G9-P1</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_F94FF4FC-F5CC-4464-87CE-78F6D59FBE9D">
+        <dmn:inputEntry id="_4718FFE4-1FBD-42DF-A802-F0FE67EA523E">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_212F2F28-9140-45E1-A5A7-A1F573C2E703">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D0D74217-787C-4636-A691-DEA34D1C4592">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CD15E02C-8C98-4E14-BAC2-525B8BF62C9F">
+          <dmn:text>"OV"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_36F2A4F4-682D-4998-BF99-78CBFF23651A">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A977CB8D-7512-4B4A-8366-CA7BD4A7C33F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_10022BF3-7EB9-4C01-A96B-EAB1553FEF26">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9CD24691-3D11-45F2-997D-BDA7CF95B47B">
+          <dmn:text>"OV"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D4FD45E9-67F2-4BEF-B874-1608BCDA619C">
+          <dmn:text>"OV"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8FE3368E-A3ED-44C0-8B47-E45DBED3421D">
+          <dmn:text>"OV"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_36B5583C-B7F3-47D4-84BC-155C4A41F8F2">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_257B9EF7-D471-4B88-AFE2-2338BE4EBCF7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_70050E71-0149-4B08-BD2C-4278B10CEFFC">
+          <dmn:text>"ADT", "CHD", "INF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EF81CF97-73EE-4031-AE79-82776F177CB0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_27774491-D885-4B9C-ACD4-E2F5EEABC86F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A163FE39-0DC7-4949-8581-99D9BDDC2F44">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D091FAAD-C8BA-430D-8923-298B45816C1C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_43790936-4C6E-48C8-9173-0E17600F80CD">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_41254126-5522-4759-96E8-798A364DBEF5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_80F56A35-4BE8-4924-8EEB-012A2A60C050">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_B198AFF8-2FC6-4794-B5B9-84306D27BA7C">
+          <dmn:text>2</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_8E0C0CEE-C4D5-4A5D-AAC2-35949C91058B">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_A193451C-AED0-4DBD-A241-C6D3CA040E3D">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_1EA03302-AE19-4BB3-BF6E-9A2C29E62830">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_4B55BC4E-C122-4A98-9DE7-496132B79B20">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_0C816AF3-BCBF-4AFF-80D0-E35F7D872BC0">
+          <dmn:text>"Service Fee"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_4BFCDAAA-BE1F-46DA-BAC8-BE945F3F11C7">
+          <dmn:text>25</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>OV-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_2AE1B980-99DB-4033-B018-DC2598344792">
+        <dmn:inputEntry id="_EE04C703-AD47-4256-9E01-D3ED43F56273">
+          <dmn:text>"CAT-01"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F256DC2E-96E5-471C-901E-802703949917">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_63A2724B-F71D-4D0C-840D-3225B298B360">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A0109B90-F09C-41FD-AD4C-106EE56C149B">
+          <dmn:text>"OV"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2F4C9E6C-A377-4B93-91B2-DA794D06CD0D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C8D5578D-95EA-4E20-BAF4-CB143C9559CA">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FCF71FA7-2EEC-4E6C-A286-20CB281DA7CF">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DF67CB71-414F-49DE-AD9B-CE6B6C414370">
+          <dmn:text>"OV"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_56963D1B-7A06-4B00-BF93-C0B64ED99F8D">
+          <dmn:text>"OV"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_953EA867-8970-4D51-BD7F-96A38CB89083">
+          <dmn:text>"OV"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_495277C0-0C32-4D5B-BC92-F1D0C31393C3">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_457C62D7-4BD4-4F08-9A23-77D705034673">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6C983A1F-C67F-497A-826B-54ED93886E69">
+          <dmn:text>"ADT", "CHD", "INF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3AB39EA3-E77A-4ED5-8572-DE8046DBBC82">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_72A0D541-17BD-4AF7-B931-5D03CFB8FDE1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5E577F4D-C70A-4C2C-83BC-C5193B32C4BE">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CBCD6D17-D9A4-436E-83C7-D01DC085A7AE">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_95F25D4A-B8C0-4C7D-BBE4-1EF01839F689">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B8B9CA56-6DB3-4D96-83A2-18A2C7A436E5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C7B02138-B697-4A72-BFF2-9B5C12751905">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_724E9AB0-AA2A-443A-ABAA-01FAE5D300A0">
+          <dmn:text>2</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_C4E7EB03-B168-4C15-B89C-CFBEFA8DD86D">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_EC979B08-9899-471C-8409-893113D25D86">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_95AD3F82-CA89-48AE-8FFA-452B938314C5">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_5E9BAD3D-429B-4965-A840-6C2B0402DACC">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_52612DB0-DB8E-4EC8-8388-0E03056F8C80">
+          <dmn:text>"Service Fee"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_5EE6C140-8055-4D35-A7D8-E702C54F57C4">
+          <dmn:text>26</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>OV-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_1699D1DD-4B23-4427-BF12-5335AE6A8317">
+        <dmn:inputEntry id="_6BF8BD18-0F0E-4A65-A2F6-C176D844EF01">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_075EE4BC-C28D-44A4-9411-CEA9925FD944">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_43C28E9F-B9D7-42D4-82ED-CC60F1850259">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F82BD637-56B2-4BCE-862F-F0407B77EFE1">
+          <dmn:text>"J9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_33D3D8DF-20F2-487E-8E52-33D7E623E4F5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8263203D-7E8A-475F-8F6E-873C373FF26C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E8547AB6-6A97-447E-A252-40B42680A113">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5C4A352A-D653-4D8C-985E-44A705F2500F">
+          <dmn:text>"J9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CC63B102-5481-43C7-BAE1-68FC9EAD280E">
+          <dmn:text>"J9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1446303E-87D2-4206-A667-82FE08C2D2A4">
+          <dmn:text>"J9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AAAE490C-70D4-4C24-9C71-DBCEC71D64D1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3CEEF341-30B5-42BE-8FF3-B78EA815725C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F5C98D32-C43B-4DC5-BF2A-78D858A31719">
+          <dmn:text>"ADT", "CHD", "INF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_32CF85F4-A16D-43F5-8D29-8CF892E9E16A">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4BE9B650-CB25-4951-8535-292A14A5F4F2">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5750FCA8-D5BF-4CBD-9302-6FEE6F2F9943">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_44D0FAFF-DB26-48EA-8C04-DA05DF6E3349">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BFA9F27B-902C-4689-8AF6-6091823C724A">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7140599B-3091-4369-886B-E6894255C3B2">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DDAEB62C-0D8F-4FD1-84BF-0097D638C45D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_50F78876-4669-494C-9F42-305279369C75">
+          <dmn:text>2</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_78D7DD7F-40AB-4C82-B184-C86965E76970">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_7B3E42B2-3482-4633-A984-49DEDE695AE4">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_ED968E9A-3709-40E9-950D-3D5231AD20B2">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_FA0F2226-6059-4437-9087-6D9305AE0DE2">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_F189ECCD-0005-40A6-84C9-7A565BDAF056">
+          <dmn:text>"Service Fee"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_C51A9840-0958-4437-85F9-99E87D063C5F">
+          <dmn:text>27</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>J9-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_8E42F63C-2DCE-4864-85B9-FB904D954867">
+        <dmn:inputEntry id="_AD36C4FD-7C93-4AB9-A636-40C4DD00D5D1">
+          <dmn:text>"CAT-01"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_945C872A-B81D-4D85-B69C-1D69028CCF83">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F4B30E44-A188-4188-9E3E-8B6D5F4255D2">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_23F0737C-E040-47B8-84FA-1866ADBC70AF">
+          <dmn:text>"J9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_01A12342-D98A-4213-874A-16CE65BD365B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_585573D5-ADE0-4DA0-9229-39E4EA8F1B78">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5471A6D7-73A5-41ED-8A05-6F916003374D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6FB58607-1B3C-47DB-AC19-53DBF2988069">
+          <dmn:text>"J9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FCC619FF-B671-466E-8CF7-247D8765492B">
+          <dmn:text>"J9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_88B6BA85-AF60-49B2-810B-423460253126">
+          <dmn:text>"J9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5BDBDB69-9CA0-474C-B032-D8B2E3EFF9F8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_16F5B7C5-CB2C-45D8-95D6-D9D335A1C175">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_32291F0B-8EF8-4CC6-B1B7-3C2272B8246A">
+          <dmn:text>"ADT", "CHD", "INF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E0E0C5FC-D242-4103-97EC-935AEC8AB0F0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A6709284-53D0-4202-85F4-1DAAEA9BCD91">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_024D1983-09F6-4398-BCC9-B1518323AF68">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0FFE9C39-09B1-4957-A3B3-A5CD24EA8685">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_863ECC45-F4B3-4F85-B2EA-13D44624DD8F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EFA9BABC-0190-4883-B335-748DE105E227">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A4512F36-C3E4-44F0-BB2E-FC10A017F1BE">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_2DBC1B2E-412C-449B-AFC5-AD798193B3E2">
+          <dmn:text>2</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_CD47913E-45B1-49E0-A4C8-305B4BC5FB19">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_358A72EA-479C-45DC-9CF4-EA6493B86B5E">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_7E810F0B-3F4D-43C4-A66A-8DC4B1553D7D">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_FB0BC7A3-2C09-4588-A4AA-5C1BD59FFBB4">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_C8A1B4C5-63B6-4593-B258-4ACAFD238CF1">
+          <dmn:text>"Service Fee"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_FDE38DBC-40AB-4934-97D9-1BCCBF4D7516">
+          <dmn:text>28</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>J9-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_5B08DF6B-01BF-4064-AC2A-1ED38A9E87B0">
+        <dmn:inputEntry id="_74137A53-D946-4B38-9453-762257DDE58D">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EA3E969F-26E9-4173-894B-0D949CB5E66C">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A9785841-7B79-4EC7-9B55-8A35FEE0F9A0">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9B2E33C5-7AD6-4FA7-B97B-F70859BFF269">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A2C9CA0B-0A0E-430E-9CD5-530142EFFB0F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8729DAB8-96F5-446C-A4D3-B193ADB2C25A">
+          <dmn:text>"7JT4"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D907EB7C-B12F-4D2F-A7D0-6630CD775857">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_196BFDAB-7222-4BD5-8D5B-D21B33060E34">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E5369E47-9929-40EE-8389-C25E51C5F9DE">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F4EEEB2E-2930-451A-A770-5F192C81A56B">
+          <dmn:text>not( ? in ["FZ","AI","BS","GF","KQ","KC","J2","OD","IF","PW","KP","U8","HM","TM","CY","LO","FI","UR","DT","G3","AM","LN","R5","TC","FJ","GP","RO","W2","SZ","WB","NE","PS","GQ","BP","BT","NX","P4","LX","BS","6H","3U","JJ","EY"])</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D76B3A9C-90CC-4CF8-A90C-8CD0FAE30CEF">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_573E19A7-6BA7-41B1-97A3-22B5F7F1DC22">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_151B33B5-0291-4A55-B450-2C4AF17A1399">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2CEFD39B-27FC-4F43-915E-A1525F840A9A">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B5394230-4087-4D4F-9878-9C43DDD2A88A">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CA12EF65-974F-4430-B5E9-3F322719C966">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B5DE1DD7-AB8D-4F53-BBC1-DBE82DE998C7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_866401AC-6064-4225-9242-BAF1B9A4DC26">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AD2391B5-3E8E-40DB-9193-850D52DD27BF">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FE58820C-A8D6-4136-A3EC-72049F2E4212">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_C488F90A-1C3F-46AD-87CE-408229FAC22D">
+          <dmn:text>5</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_595747E7-18DA-4952-840D-2C87EB119228">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_E46B1D4E-2CCD-491B-A392-11DF86307C35">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_6687A1AF-F99A-4F0E-9550-BF3220FBE556">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_AA0CFB74-2635-489A-8B6C-99E0C7BC5029">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_A82702DE-A23E-4EE3-B393-D9A5896DE195">
+          <dmn:text>"Service Fee"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_EC7A7AC1-F904-40A5-AC98-D6ACB4A7383C">
+          <dmn:text>29</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>7JT4-PSF</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_C50E7C1F-4C2B-46C0-BFBF-3777AFF74EA3">
+        <dmn:inputEntry id="_C143527D-925D-4CD8-A5B9-7D8C2B4F5B35">
+          <dmn:text>"CAT-01"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9713CEF0-E636-41CF-9DAA-63F41560AA55">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A73E2F2F-66AC-43AE-9E3B-4454336F8465">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D403833B-5CBD-45ED-AC9C-005CF375A5E0">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3A930EAC-1986-4CB4-897F-530066C22843">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BC3AE1AC-6928-4AF9-9DD5-2711FD737C7D">
+          <dmn:text>"7JT4"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_29035CED-0F27-43FC-8E9C-C5ED1F0A7F85">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_240E45ED-9969-41E6-B168-A7CD4B6571B2">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B85580B6-9003-4FDE-9437-72D8B9D1EA08">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_98AE7DED-E4F1-48FD-BB03-7143CAE7D48D">
+          <dmn:text>not( ? in ["FZ","AI","BS","GF","KQ","KC","J2","OD","IF","PW","KP","U8","HM","TM","CY","LO","FI","UR","DT","G3","AM","LN","R5","TC","FJ","GP","RO","W2","SZ","WB","NE","PS","GQ","BP","BT","NX","P4","LX","BS","6H","3U","JJ","EY"])</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CE20DD2D-393D-496E-B6EB-6BD8E8C303B0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_36C9B68E-0341-4152-AF91-5139072AF32D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_16087D1F-3669-48F9-96E0-D7D892C7B2BF">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2CF2300D-28C3-4058-8D1B-67FCDE260E44">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_211CE2D5-B87E-4693-BE6C-3433043C167C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A7D85003-347E-4361-9E3F-E672EE4D4F84">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C76947AA-9A61-4C49-B7B9-15E0D172210D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_19E18276-A393-4F56-9EB0-E43A96838877">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3C7D14EA-6419-43DE-B9F6-9295B434D588">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B4282F56-20B8-4E5B-A3BC-1040C6EB83D0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_442449E5-1E80-49A6-84B4-32491E5FDC71">
+          <dmn:text>5</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_7CEADF4B-E9D8-4266-B8CC-FFE880E42651">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_7A046B59-4A32-424C-BCAC-8C2A68F140A7">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_B4399ACE-C405-4BB1-9D5A-8F7E28E4093A">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_F8C82D14-7591-4E69-8458-E1036A328F9A">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_5410EA5E-D2F4-4C8F-99FE-2D50EBB66C3B">
+          <dmn:text>"Service Fee"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_6D30C5D2-C493-4050-ADA6-A866AAEAB0A0">
+          <dmn:text>30</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>7JT4-PSF</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_53CD1BDB-C250-4D70-BE1E-B0DBE3182854">
+        <dmn:inputEntry id="_6CE1F2F2-1139-43F4-992C-EBCB13DD6AE9">
+          <dmn:text>"CAT-3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BBE3D0D6-23C1-419F-BE7C-1D1F4D4D6CF0">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BEBC11DD-0CE5-4E51-B2BC-B04E26D3F5B5">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4F71A072-2C59-4A6E-BDB4-4CDDBD2F0172">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_06500F6F-D42D-4FC3-9475-D009FD6C4244">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_57109C0F-5294-4236-BEF7-C2AA4F38F194">
+          <dmn:text>"7JT4"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FD186DCC-DF8E-41CA-AA71-F5C5E21D43B5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A3B847C4-5040-45A7-A492-0A5D23D67722">
+          <dmn:text>"BG"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_85405710-3325-4C63-B19F-22FFBABFAEF9">
+          <dmn:text>"BG"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A28E0B01-EC49-429C-A44B-A60FF209798E">
+          <dmn:text>"BG"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BFA7A2C0-D4CC-465F-AEBA-49AC4DD6CB55">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BE2B5203-7BAB-4964-95B8-5118D4325130">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E3A4A544-F7F1-43E5-82D2-6C80FC651D07">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_758F3413-3B0C-4787-855B-0C96024371E8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EAAE7479-740F-43F0-AB5F-01737D3D9A20">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2B939759-E1F7-484E-9643-D7AFB4899A8F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6F2B9CD2-EF39-42DD-95B7-11BD06177E0F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E4779A7C-2B58-4D72-9FCF-9F79080123E7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4450FF83-D32B-43C3-954F-F16D808DA869">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1F2FAF33-3E64-4403-8C5F-BC368A68C309">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_803326A1-7F0C-462A-A3DF-A8381B167002">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_67F88F65-D5D8-4F06-BF7F-DE4A1A344F8C">
+          <dmn:text>6</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_5E55DEE9-EFE9-4E78-BB19-0F85A841632D">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_1BC61E35-FBFE-41AA-BD1C-3792AD1A760D">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_84CABE59-6237-4A78-B566-306351900556">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_B656DBD2-215B-4F61-BA72-64045944991F">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_DAF3CBD6-B17A-4578-9739-1164C1C516BE">
+          <dmn:text>31</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>BG-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_9DB72425-80E6-4C08-AAFB-00A56C413211">
+        <dmn:inputEntry id="_6195B3BC-2A9F-4149-BCC0-C70BB4C8CBA1">
+          <dmn:text>"CAT-01"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_01DEE689-A521-4020-A5C6-F120159DDBFA">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_20DFC959-89EF-440E-AE0C-E5C358325C14">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_69F75E00-BE8C-4D28-BA91-297EB928A9A6">
+          <dmn:text>"1G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EEF0B422-9DDD-490B-A0E2-0CBDB38FD220">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6A185E56-99C1-4B84-B3EC-E170479C2971">
+          <dmn:text>"7JT4"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_021C8BE8-65CA-423A-9988-57657D9B9141">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3918FDE2-1260-4711-B03D-CE2C043F7699">
+          <dmn:text>"BG"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A0C12E49-85BC-4268-893E-FD91D21BB7B8">
+          <dmn:text>"BG"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2CDF5338-3BF4-493C-8C1F-57AB77BA2940">
+          <dmn:text>"BG"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3FF03558-3B00-43A2-9647-B408C459B5D7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_27298144-C6CB-4EB4-A177-B012B8775980">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5111E3F0-AC8C-4C7B-8BF0-AD413B8AD106">
+          <dmn:text>"ADT", "CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6C085FE6-FC6A-459F-865F-12A28F5EAE13">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4289C572-EDE0-47E7-9D54-DE773B859338">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7D9C4549-4FFF-4F1D-8D6E-0056528F2E2A">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9E98E9C1-1A0D-42C9-A1F0-1CAD68B2D88B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4698DA6B-5B59-44FC-8671-AAC83E568CA3">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B996CBA2-BE12-4066-A1AF-797D495AA027">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2C809F80-4D4F-4F09-AD56-21CCB7ABBA00">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_939F7B03-BBB3-464E-AC15-DACA7D3569AC">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_890E6B61-C23A-43A9-B18F-6CFC1BE6526C">
+          <dmn:text>6</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_EAB2A5FD-4AF4-4C3B-8D39-2BD0ECC58532">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_F5C5F3A1-1F6B-450B-88FC-008A6701024E">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_56836FCA-85B2-4E46-86DD-DFF5E7E8125E">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_F9D23025-AD1F-4965-9532-FFA8B8DC9F64">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_CC232A19-5BF6-4F10-B086-60D37BB2A9E1">
+          <dmn:text>32</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>BG-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:inputData id="_92852862-45AC-4E9E-A3C4-12B6BCFD1105" name="Origin">
+    <dmn:extensionElements/>
+    <dmn:variable id="_9A0832C7-86C4-4F8D-9E0A-343086B385BD" name="Origin" typeRef="Airport Code"/>
+  </dmn:inputData>
+  <dmn:inputData id="_9D8B056C-3F58-489C-98C5-8CA81DF3B79F" name="Destination">
+    <dmn:extensionElements/>
+    <dmn:variable id="_927A8C00-6152-4847-BFFD-D741850F7B39" name="Destination" typeRef="Airport Code"/>
+  </dmn:inputData>
+  <dmn:inputData id="_129857BD-09E7-4983-BACF-FB747EE0B7C1" name="Travel Date">
+    <dmn:extensionElements/>
+    <dmn:variable id="_758EE892-655A-4970-A2DE-003E6C1D96C5" name="Travel Date" typeRef="date"/>
+  </dmn:inputData>
+  <dmn:inputData id="_83B65D26-FDC0-4F0B-AEA3-534A75A6A824" name="Booking Date">
+    <dmn:extensionElements/>
+    <dmn:variable id="_99879B98-2882-4E42-9E58-AC602CBFCF72" name="Booking Date" typeRef="date"/>
+  </dmn:inputData>
+  <dmn:inputData id="_218F02DB-B908-43CA-AC5F-40C10A2DA445" name="Pax Type">
+    <dmn:extensionElements/>
+    <dmn:variable id="_DE67D285-134F-42C6-BA35-E43451FFF374" name="Pax Type" typeRef="Pax Type"/>
+  </dmn:inputData>
+  <dmn:inputData id="_75D7CEDA-8813-44FA-A0FB-98DD8E31DDFE" name="Marketing Airline">
+    <dmn:extensionElements/>
+    <dmn:variable id="_E50DFDB6-48C1-43BE-8E68-32303B928B72" name="Marketing Airline" typeRef="Air Line"/>
+  </dmn:inputData>
+  <dmn:inputData id="_91AC4091-A00E-4EE4-A96A-477B4CD89957" name="Operating Airline">
+    <dmn:extensionElements/>
+    <dmn:variable id="_479F0BC2-0772-4D7E-8CAA-79A5DF1D58FE" name="Operating Airline" typeRef="Air Line"/>
+  </dmn:inputData>
+  <dmn:inputData id="_11C97A11-ADF6-49CE-B098-B33F921B77DA" name="Validating Airline">
+    <dmn:extensionElements/>
+    <dmn:variable id="_AABC217C-60F6-4E9C-AA73-2DAC744F0B9A" name="Validating Airline" typeRef="Air Line"/>
+  </dmn:inputData>
+  <dmn:inputData id="_E4A941CE-D716-45A9-87C6-AF29BD5FA23D" name="Cabin Class">
+    <dmn:extensionElements/>
+    <dmn:variable id="_319463ED-06E9-4E61-B0D5-1F54D924A9FE" name="Cabin Class" typeRef="Cabin Class"/>
+  </dmn:inputData>
+  <dmn:inputData id="_548F7BDF-817E-4010-98A8-E5BEA0FD929F" name="Trip Type">
+    <dmn:extensionElements/>
+    <dmn:variable id="_15161B35-7602-4D8B-BA13-50E5B4B6E31A" name="Trip Type" typeRef="Trip Type"/>
+  </dmn:inputData>
+  <dmn:inputData id="_3925DC95-AA86-4411-891C-71ABFAF759D9" name="RBD">
+    <dmn:extensionElements/>
+    <dmn:variable id="_4963882C-81E6-4F9F-9BA0-3785FAEFDB77" name="RBD" typeRef="RBD"/>
+  </dmn:inputData>
+  <dmn:inputData id="_F62A58A7-731A-4DFD-835F-689AB74B51C1" name="Base Fare">
+    <dmn:extensionElements/>
+    <dmn:variable id="_6A29A556-F769-45C0-BD23-CE83E283FDF4" name="Base Fare" typeRef="Amount"/>
+  </dmn:inputData>
+  <dmn:inputData id="_6AA8F54C-B9E3-4280-A499-A3576F84C66E" name="Tax">
+    <dmn:extensionElements/>
+    <dmn:variable id="_9737B215-88AA-4DFA-BBC0-FA0FA40E063D" name="Tax" typeRef="Amount"/>
+  </dmn:inputData>
+  <dmn:inputData id="_76C7783D-EAA7-4D34-9339-0B68EC2C89E2" name="Office ID">
+    <dmn:extensionElements/>
+    <dmn:variable id="_879146BA-8D7C-4A69-AE8D-BC0BC37A9A69" name="Office ID" typeRef="string"/>
+  </dmn:inputData>
+  <dmn:inputData id="_10069CDD-28D9-45A8-8ACB-4DB6B2E32847" name="DealCode">
+    <dmn:extensionElements/>
+    <dmn:variable id="_AFC81825-2B42-4F24-976E-DF6EF80BC70D" name="DealCode" typeRef="string"/>
+  </dmn:inputData>
+  <dmn:inputData id="_C7ACD61A-6A92-4D68-984D-285A57ECFDAE" name="Fare Basis">
+    <dmn:extensionElements/>
+    <dmn:variable id="_ED357731-676C-4BF1-8A58-89AC793C61B2" name="Fare Basis" typeRef="string"/>
+  </dmn:inputData>
+  <dmn:inputData id="_C6F5CF93-7043-4520-A79E-A2CEC42054C8" name="Rule Category">
+    <dmn:extensionElements/>
+    <dmn:variable id="_A0E55AFB-DEAE-427F-9007-EAE7543ED81A" name="Rule Category" typeRef="string"/>
+  </dmn:inputData>
+  <dmn:inputData id="_8D8C44C0-357B-43E4-9B8A-FE0A74696994" name="Service">
+    <dmn:extensionElements/>
+    <dmn:variable id="_4C0EDA53-B329-40A4-969E-41F410945914" name="Service" typeRef="Service"/>
+  </dmn:inputData>
+  <dmn:inputData id="_4FB63DE2-5CC1-4D17-875F-D1CFB565CFA3" name="Enabled">
+    <dmn:extensionElements/>
+    <dmn:variable id="_D7167BD8-49BC-4A85-91AC-ACC23A9D4297" name="Enabled" typeRef="boolean"/>
+  </dmn:inputData>
+  <dmn:inputData id="_4748732D-6962-4AC9-8083-542D5FCC0846" name="Booking PCC">
+    <dmn:extensionElements/>
+    <dmn:variable id="_5A52C27E-C98A-4CAF-9B45-27E1492D3009" name="Booking PCC" typeRef="string"/>
+  </dmn:inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_3BCB9F13-BA3E-4AD6-A06E-8118EF951D45" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_4D44AFAE-5B82-4A8D-933C-A8C1D8407F20">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>104</kie:width>
+            <kie:width>156</kie:width>
+            <kie:width>484</kie:width>
+            <kie:width>174</kie:width>
+            <kie:width>354</kie:width>
+            <kie:width>144</kie:width>
+            <kie:width>376</kie:width>
+            <kie:width>377</kie:width>
+            <kie:width>348</kie:width>
+            <kie:width>165</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>370</kie:width>
+            <kie:width>406</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>129</kie:width>
+            <kie:width>129</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_E05602D1-1C40-4C7B-9461-CA7D21047BFC" dmnElementRef="_E05602D1-1C40-4C7B-9461-CA7D21047BFC" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="467.5981308411215" y="409" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_72DFBC92-82CB-4544-A25F-E2CED29497B6" dmnElementRef="_72DFBC92-82CB-4544-A25F-E2CED29497B6" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="608" y="143" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_92852862-45AC-4E9E-A3C4-12B6BCFD1105" dmnElementRef="_92852862-45AC-4E9E-A3C4-12B6BCFD1105" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="254.59813084112147" y="366" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_9D8B056C-3F58-489C-98C5-8CA81DF3B79F" dmnElementRef="_9D8B056C-3F58-489C-98C5-8CA81DF3B79F" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="254.59813084112147" y="431.3421052631579" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_129857BD-09E7-4983-BACF-FB747EE0B7C1" dmnElementRef="_129857BD-09E7-4983-BACF-FB747EE0B7C1" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="422.5981308411215" y="1.6842105263157947" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_83B65D26-FDC0-4F0B-AEA3-534A75A6A824" dmnElementRef="_83B65D26-FDC0-4F0B-AEA3-534A75A6A824" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="526.2990654205607" y="1.6842105263157947" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_218F02DB-B908-43CA-AC5F-40C10A2DA445" dmnElementRef="_218F02DB-B908-43CA-AC5F-40C10A2DA445" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="881" y="334.3421052631579" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_75D7CEDA-8813-44FA-A0FB-98DD8E31DDFE" dmnElementRef="_75D7CEDA-8813-44FA-A0FB-98DD8E31DDFE" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="866" y="283" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_91AC4091-A00E-4EE4-A96A-477B4CD89957" dmnElementRef="_91AC4091-A00E-4EE4-A96A-477B4CD89957" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="866" y="225" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_11C97A11-ADF6-49CE-B098-B33F921B77DA" dmnElementRef="_11C97A11-ADF6-49CE-B098-B33F921B77DA" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="866" y="162" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_E4A941CE-D716-45A9-87C6-AF29BD5FA23D" dmnElementRef="_E4A941CE-D716-45A9-87C6-AF29BD5FA23D" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="747.2990654205607" y="1.6842105263157947" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_548F7BDF-817E-4010-98A8-E5BEA0FD929F" dmnElementRef="_548F7BDF-817E-4010-98A8-E5BEA0FD929F" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="866" y="79.34210526315789" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_3925DC95-AA86-4411-891C-71ABFAF759D9" dmnElementRef="_3925DC95-AA86-4411-891C-71ABFAF759D9" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="866" y="1.6842105263157947" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_F62A58A7-731A-4DFD-835F-689AB74B51C1" dmnElementRef="_F62A58A7-731A-4DFD-835F-689AB74B51C1" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="254.59813084112147" y="248.34210526315792" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_6AA8F54C-B9E3-4280-A499-A3576F84C66E" dmnElementRef="_6AA8F54C-B9E3-4280-A499-A3576F84C66E" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="260.5981308411215" y="303" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_76C7783D-EAA7-4D34-9339-0B68EC2C89E2" dmnElementRef="_76C7783D-EAA7-4D34-9339-0B68EC2C89E2" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="814" y="385.53707974268724" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_10069CDD-28D9-45A8-8ACB-4DB6B2E32847" dmnElementRef="_10069CDD-28D9-45A8-8ACB-4DB6B2E32847" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="594.5981308411215" y="431" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_C7ACD61A-6A92-4D68-984D-285A57ECFDAE" dmnElementRef="_C7ACD61A-6A92-4D68-984D-285A57ECFDAE" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="701.7640186915887" y="404" width="105" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_C6F5CF93-7043-4520-A79E-A2CEC42054C8" dmnElementRef="_C6F5CF93-7043-4520-A79E-A2CEC42054C8" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="625.2990654205607" y="1.6842105263157947" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_8D8C44C0-357B-43E4-9B8A-FE0A74696994" dmnElementRef="_8D8C44C0-357B-43E4-9B8A-FE0A74696994" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="353.69392523364485" y="431" width="115" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_4FB63DE2-5CC1-4D17-875F-D1CFB565CFA3" dmnElementRef="_4FB63DE2-5CC1-4D17-875F-D1CFB565CFA3" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="401" y="55.684210526315795" width="95" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_4748732D-6962-4AC9-8083-542D5FCC0846" dmnElementRef="_4748732D-6962-4AC9-8083-542D5FCC0846" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="347.52336448598135" y="98.68421052631581" width="81" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_E9FE3DA8-265C-4F1E-A310-DB5537070E36" dmnElementRef="_E9FE3DA8-265C-4F1E-A310-DB5537070E36">
+        <di:waypoint x="517.5981308411215" y="434"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_F5768F93-80ED-44B4-93AA-318950ABC50E" dmnElementRef="_F5768F93-80ED-44B4-93AA-318950ABC50E">
+        <di:waypoint x="304.5981308411215" y="456.3421052631579"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_E2222A67-F583-4CD8-8EFC-73B145FCD4E6" dmnElementRef="_E2222A67-F583-4CD8-8EFC-73B145FCD4E6">
+        <di:waypoint x="576.2990654205607" y="26.684210526315795"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_ACBE999F-8DA7-4542-947B-5A4412357BB6" dmnElementRef="_ACBE999F-8DA7-4542-947B-5A4412357BB6">
+        <di:waypoint x="472.5981308411215" y="26.684210526315795"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_5358AD2D-C795-4CB7-848A-79C4C4C882F0" dmnElementRef="_5358AD2D-C795-4CB7-848A-79C4C4C882F0">
+        <di:waypoint x="881" y="359.3421052631579"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_87CF2E45-BF5C-4630-9CBF-B112BC5784B4" dmnElementRef="_87CF2E45-BF5C-4630-9CBF-B112BC5784B4">
+        <di:waypoint x="866" y="308"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_4280DBD5-3688-4A36-9957-132504801148" dmnElementRef="_4280DBD5-3688-4A36-9957-132504801148">
+        <di:waypoint x="866" y="250"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_113D74E7-6D8C-419E-96DB-ADF59A688BA8" dmnElementRef="_113D74E7-6D8C-419E-96DB-ADF59A688BA8">
+        <di:waypoint x="866" y="187"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_1DDE5B7B-1D96-4299-849A-3822B7E81971" dmnElementRef="_1DDE5B7B-1D96-4299-849A-3822B7E81971">
+        <di:waypoint x="797.2990654205607" y="26.684210526315795"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_685E1465-54D7-4949-87F0-868F061D11E4" dmnElementRef="_685E1465-54D7-4949-87F0-868F061D11E4">
+        <di:waypoint x="866" y="104.34210526315789"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_E52B853D-1455-490B-A2FC-4DDBD8929FF8" dmnElementRef="_E52B853D-1455-490B-A2FC-4DDBD8929FF8">
+        <di:waypoint x="916" y="26.684210526315795"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_5769663D-B969-4AEC-A943-10B12206FE41" dmnElementRef="_5769663D-B969-4AEC-A943-10B12206FE41">
+        <di:waypoint x="304.5981308411215" y="273.3421052631579"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_5864A474-AB2F-48AE-838F-FC4A427E73F7" dmnElementRef="_5864A474-AB2F-48AE-838F-FC4A427E73F7">
+        <di:waypoint x="310.5981308411215" y="328"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_3779883B-F2CA-4757-9C08-50A058ADE880" dmnElementRef="_3779883B-F2CA-4757-9C08-50A058ADE880">
+        <di:waypoint x="304.5981308411215" y="391"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_CFE085E8-8666-4717-B663-52F1A67BF267" dmnElementRef="_CFE085E8-8666-4717-B663-52F1A67BF267">
+        <di:waypoint x="644.5981308411215" y="456"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_9B33EE3C-14FA-4765-999B-54D70BDD9C64" dmnElementRef="_9B33EE3C-14FA-4765-999B-54D70BDD9C64">
+        <di:waypoint x="754.2640186915887" y="429"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_C623AAB2-FA1D-4373-A08B-ECD11A2095C0" dmnElementRef="_C623AAB2-FA1D-4373-A08B-ECD11A2095C0">
+        <di:waypoint x="864" y="385.53707974268724"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_3D0EDF87-D284-45AD-80A7-1DE1C9CFC213" dmnElementRef="_3D0EDF87-D284-45AD-80A7-1DE1C9CFC213">
+        <di:waypoint x="675.2990654205607" y="26.684210526315795"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_C44137B5-7B10-4394-AF15-39B3F11FDFD6" dmnElementRef="_C44137B5-7B10-4394-AF15-39B3F11FDFD6">
+        <di:waypoint x="411.19392523364485" y="456"/>
+        <di:waypoint x="658" y="168"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_74B7B420-A31A-46FF-B2AB-3EEB53ADA033-AUTO-SOURCE" dmnElementRef="_74B7B420-A31A-46FF-B2AB-3EEB53ADA033">
+        <di:waypoint x="448.5" y="105.6842105263158"/>
+        <di:waypoint x="658" y="143"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_0AA8FA9E-F109-4AFD-AA59-28B5809DD38E" dmnElementRef="_0AA8FA9E-F109-4AFD-AA59-28B5809DD38E">
+        <di:waypoint x="388.02336448598135" y="123.68421052631581"/>
+        <di:waypoint x="608" y="168"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
