@@ -225,7 +225,7 @@
       <dmn:annotation name="comments"></dmn:annotation>
       <dmn:rule id="_C159F650-DCD9-48F7-850D-43E7BB919B0F">
         <dmn:inputEntry id="_B55ABD7F-17C5-4EAD-9CAA-A1D9819EC0EE">
-          <dmn:text>"CAT-3"</dmn:text>
+          <dmn:text>"CAT-03"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_15ECA102-D2E2-4E96-9B92-08AAE599F5A3">
           <dmn:text>true</dmn:text>
@@ -234,7 +234,7 @@
           <dmn:text>"Air"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_60DDB72F-E980-4B69-AE24-ED885699E476">
-          <dmn:text>"ER"</dmn:text>
+          <dmn:text>"CP"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_4AF7FC11-36AF-4D5D-8031-8C8D8837FF83">
           <dmn:text>-</dmn:text>
@@ -243,7 +243,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_98CCD190-7267-496F-B2EB-D6C141698133">
-          <dmn:text>-</dmn:text>
+          <dmn:text>"OW","RT","MC"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_D8680D02-9A2D-4CBE-B88C-8981222187E0">
           <dmn:text>"ER"</dmn:text>
@@ -261,7 +261,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_8809FD7B-4496-404A-98CF-C40268F25C93">
-          <dmn:text>"ADT", "CHD"</dmn:text>
+          <dmn:text>"ADT","CHD"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_A23699C5-64F9-44A3-8EB0-F623FBE944EB">
           <dmn:text>-</dmn:text>
