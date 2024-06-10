@@ -220,6 +220,7 @@
       <dmn:output id="_F4F4746D-406A-4B3F-B76A-0D5829314A1B" name="Apply on Pax" typeRef="string"/>
       <dmn:output id="_7571B958-EA14-48BF-8C71-09218C130E36" name="Cumulative" typeRef="boolean"/>
       <dmn:output id="_5A8DD7F1-3587-4262-A66C-447AD5AE5E43" name="Markup Type" typeRef="string"/>
+      <dmn:output id="_64510DD5-BD9A-4D6C-82E1-8147E41E1EF4" name="SegmentCount" typeRef="boolean"/>
       <dmn:output id="_550D1467-AC45-4FBB-B53D-DE817121B71E" name="Id" typeRef="number"/>
       <dmn:annotation name="comments"/>
       <dmn:rule id="_C159F650-DCD9-48F7-850D-43E7BB919B0F">
@@ -300,6 +301,9 @@
         </dmn:outputEntry>
         <dmn:outputEntry id="_8C056E46-B5BB-4781-976F-95221253E912">
           <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_3FF92236-E880-4EE0-824F-74DA57008E17">
+          <dmn:text>false</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_F7A40BC1-D8ED-49F5-8E18-6F3A05DE1733">
           <dmn:text>1</dmn:text>
@@ -387,6 +391,9 @@
         <dmn:outputEntry id="_277C5425-C132-4322-A02F-6CE28F9AE530">
           <dmn:text>"Discount"</dmn:text>
         </dmn:outputEntry>
+        <dmn:outputEntry id="_BE2B5C05-A1C2-409C-8454-F34A79AE4E09">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
         <dmn:outputEntry id="_60262299-E91D-4D86-83DE-981BFC39B2CA">
           <dmn:text>2</dmn:text>
         </dmn:outputEntry>
@@ -473,6 +480,9 @@
         <dmn:outputEntry id="_AA6A6D95-D767-4D96-965B-5A45C0825AA9">
           <dmn:text>"Discount"</dmn:text>
         </dmn:outputEntry>
+        <dmn:outputEntry id="_080E65D7-4B7C-43F4-A8FA-FBA12078FABB">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
         <dmn:outputEntry id="_17521B91-9696-47A2-B85E-7E704741D8FD">
           <dmn:text>3</dmn:text>
         </dmn:outputEntry>
@@ -558,6 +568,9 @@
         </dmn:outputEntry>
         <dmn:outputEntry id="_EF2FDF96-D0C6-4B8B-830D-A7AEC98DB9FD">
           <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_F53EE214-FCB1-4BFD-B962-0C38B919C345">
+          <dmn:text>false</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_9E1A42A2-6D4F-4EE7-99B6-A04FF049C274">
           <dmn:text>4</dmn:text>
@@ -677,6 +690,7 @@
             <kie:width>100</kie:width>
             <kie:width>129</kie:width>
             <kie:width>129</kie:width>
+            <kie:width>100</kie:width>
             <kie:width>100</kie:width>
             <kie:width>100</kie:width>
             <kie:width>100</kie:width>
