@@ -314,7 +314,7 @@
       </dmn:rule>
       <dmn:rule id="_488B547A-5481-4CC8-840B-18293B013272">
         <dmn:inputEntry id="_90996F4E-057B-4D86-A7D3-9E7080A5FB61">
-          <dmn:text>"CAT-3"</dmn:text>
+          <dmn:text>"CAT-03"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_8E6A9B2F-3D23-43B0-8743-12CD57391204">
           <dmn:text>true</dmn:text>
@@ -323,7 +323,7 @@
           <dmn:text>"Air"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_31ED3519-C3E7-43D5-8B4F-5DBF85D9ACFE">
-          <dmn:text>"1G"</dmn:text>
+          <dmn:text>"CP"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_E4B856AF-4BEA-4F3A-8EBA-91C5F7C34DE9">
           <dmn:text>-</dmn:text>
@@ -332,7 +332,7 @@
           <dmn:text>"71NF"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_2F57C7FE-34D8-4FB6-9010-5B99C39907C5">
-          <dmn:text>-</dmn:text>
+          <dmn:text>"OW","RT","MC"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_B6CC606E-39BF-4963-A49A-2B3505CA580B">
           <dmn:text>"UL"</dmn:text>
@@ -350,7 +350,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_0A0F07E6-FF85-4414-A038-602CAE516427">
-          <dmn:text>"ADT", "CHD"</dmn:text>
+          <dmn:text>"ADT","CHD"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_B8DAA87B-7B9C-4DAE-8B45-3DB48BDCDECC">
           <dmn:text>-</dmn:text>
@@ -377,7 +377,7 @@
           <dmn:text>0</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_D4680D0E-2CC9-412E-A8CB-125392A1B71B">
-          <dmn:text>4</dmn:text>
+          <dmn:text>3.75</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_5859D674-8568-4488-9F3D-DE8496FB283B">
           <dmn:text>false</dmn:text>
