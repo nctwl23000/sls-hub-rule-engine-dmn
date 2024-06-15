@@ -935,6 +935,95 @@
           <dmn:text>GF-01</dmn:text>
         </dmn:annotationEntry>
       </dmn:rule>
+      <dmn:rule id="_de4c0a61-67ed-43f0-bdf4-3a08ff96447f">
+        <dmn:inputEntry id="_42cdbf5a-908d-4240-8d89-d5b87b5c5966">
+          <dmn:text>"CAT-03"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5dfef03b-f63c-4f69-8971-fb234cd9656b">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_99e99cfd-506b-4bbf-ab11-f28d75598262">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_e664fad3-6944-421c-b865-a5bc164d01cf">
+          <dmn:text>"CP"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_a706669f-90d9-4e31-9232-964863352943">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_c13c4793-d3de-4f4e-b9ac-1752616eec71">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_b1a2adb1-694c-4f55-b0ba-ca205520e864">
+          <dmn:text>"OW","RT","MC"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_67d608b2-9d8d-4689-a4d7-62488536ffee">
+          <dmn:text>"9P","FZ","G9","OV","J9","XY"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_251afa5c-81c7-4a85-98e3-72a6f98894a0">
+          <dmn:text>"9P","FZ","G9","OV","J9","XY"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_50d94b1a-50a7-4f6a-91f8-219958244765">
+          <dmn:text>"9P","FZ","G9","OV","J9","XY"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_882c60c0-b3c4-4c5c-b01e-59fdda8d6b7c">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3130a304-bf81-4e51-8481-021ad91a2a3a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5dd7a9b2-a2d1-421b-b670-b903839432ca">
+          <dmn:text>"ADT","CHD","INF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1900e466-51c8-4e38-82e0-079c1cd55cef">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_92977c7c-46a0-4f08-b5ce-a27a45887d04">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_b5345b64-8368-42ec-922a-04147ff4623c">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_87e74baf-9c14-4169-be5c-28e8ca2bd959">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_563f2a7a-e8c4-4c53-b8dd-3951db2cfc35">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_b2f0c8e1-1772-47bb-9c0c-bc134d1aeeae">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_66a4aa95-be54-4e81-bc5c-ab91b682893e">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_1afc3afe-3202-485d-b45b-59289cbb9885">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_fe4e4dd4-4d00-408b-85fa-b7a4a2d1722d">
+          <dmn:text>0.60</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_625ef889-5abe-4b0d-a271-1d33e1b2436e">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_e7ca1c7a-8f55-481d-80eb-f36584396460">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_5f5d3417-9b09-4401-b005-8623181a0512">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_26ceefe5-6683-481a-bf3f-367297f689a3">
+          <dmn:text>"Service Fee"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_389432c1-144e-4935-bcd7-f78cfa953b5c">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_c6d86283-1582-4739-816f-c566d716d238">
+          <dmn:text>11</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>PSF - 9P,FZ,G9,OV,J9,XY</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
   <dmn:inputData id="_92852862-45AC-4E9E-A3C4-12B6BCFD1105" name="Origin">
