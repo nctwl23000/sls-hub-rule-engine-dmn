@@ -846,6 +846,95 @@
           <dmn:text>SV-01</dmn:text>
         </dmn:annotationEntry>
       </dmn:rule>
+      <dmn:rule id="_2db2ae17-e2d4-432f-9009-7eb2cf8e2a73">
+        <dmn:inputEntry id="_c6f340d6-20d0-4916-bcde-ac969336dacf">
+          <dmn:text>"CAT-03"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_80e44a6c-0490-426d-99b0-74bb5b43f246">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_34271c54-725a-49f4-bc22-0dc9e3054f27">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_f27e4918-f783-4746-926f-f29401834da0">
+          <dmn:text>"CP"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_386b3227-27c1-472a-ada7-3f95f9685df0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6c9f3c7c-24b0-4f52-bc88-1b6ba57da5e6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_dcf04e77-7827-48a0-a391-10b6d6ade647">
+          <dmn:text>"OW","RT","MC"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_55f93a21-b090-45be-9cfb-603f97b2d28c">
+          <dmn:text>"GF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4719dfdf-4d8a-459a-900a-51592f32d4fb">
+          <dmn:text>"GF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_907a189a-32fd-4959-a554-368bb2a231c9">
+          <dmn:text>"GF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_328d8711-fddf-43b2-8081-94ed4f81346b">
+          <dmn:text>"KHI","PEW","ISB","SKT","LHE","LYP","MUX"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_d342724d-86cd-4161-9423-601932d73127">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_18c66e20-d727-4b8e-b07b-98846476bc84">
+          <dmn:text>"ADT","CHD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_14019c20-f301-4523-8b2f-b5a3fba5791b">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_a403b6a8-c0c0-4354-ae7f-499e683f001d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_b7db45ff-71ea-467b-b59f-c2e1e9029f52">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_ebcc2ed5-c374-42f0-9f5c-a4c33f56d83d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_62d3f945-04f7-418b-ab31-69eae3ed7170">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_95f9f58d-0020-4bf0-aff3-5a914ccd8ea7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0673c8d7-75bd-4f60-b143-adb014de918b">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_f2df9973-89a1-47c8-bf71-e68cdfeaff0f">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_66427da2-4ebc-4380-9d3f-1f2e37c7fb4f">
+          <dmn:text>3</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_b453ac84-d017-4b03-9c5f-9ba57e3da504">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_9beaff24-a076-47c6-8b63-0a9e96c9a696">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_8df68540-2e73-41bd-bdbf-bdbd9f298728">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_3087d0ac-f8a2-44b3-b76e-f0c240dc75a1">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_a79475eb-e719-48c1-ac13-8a07043f313b">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_22898502-f63e-41de-904d-027371b28f73">
+          <dmn:text>10</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>GF-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
   <dmn:inputData id="_92852862-45AC-4E9E-A3C4-12B6BCFD1105" name="Origin">
