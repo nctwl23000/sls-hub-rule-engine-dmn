@@ -344,7 +344,7 @@
           <dmn:text>"UL"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_5F60B660-9128-4250-A358-3EA70092875F">
-          <dmn:text>-</dmn:text>
+          <dmn:text>"LHE","KHI","ISB"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_A2A2C61D-3C30-443E-BFAF-98360D390993">
           <dmn:text>-</dmn:text>
