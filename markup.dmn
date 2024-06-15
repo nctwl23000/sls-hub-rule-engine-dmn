@@ -611,7 +611,7 @@
           <dmn:text>"OD"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_9ff4a479-af83-4169-8273-361d186a2162">
-          <dmn:text>-</dmn:text>
+          <dmn:text>"LHE","KHI"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_b8345622-3c1f-4104-8304-1c06be8082ac">
           <dmn:text>-</dmn:text>
