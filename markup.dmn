@@ -1145,7 +1145,7 @@
           <dmn:text>"EY"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_dfab5df2-bea9-429b-8b0d-158b290eaa01">
-          <dmn:text>-</dmn:text>
+          <dmn:text>"KHI","ISB","LHE"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_aec4a83b-3aa8-4b12-9f5b-8bdb55e2af88">
           <dmn:text>-</dmn:text>
@@ -1157,7 +1157,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_a8e0fe00-7a92-4a45-b439-11e8feb3cdfe">
-          <dmn:text>-</dmn:text>
+          <dmn:text>"A","B","C","D","F","H","J","K","L","M","P","Q","R","U","V","W","Y","Z"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_0c766597-e278-410b-a827-4bf478edbb8d">
           <dmn:text>&lt;=date( "2025-01-31" )</dmn:text>
