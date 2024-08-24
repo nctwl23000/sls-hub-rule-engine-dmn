@@ -1249,7 +1249,7 @@
           <dmn:text>"F","P","A","J","C","D","I","Y","E","B","M","K","H","L","Q","T","G"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_e721d555-9725-4032-a127-503e507ffd21">
-          <dmn:text>[date( "2024-12-01" ) ..date( "2025-01-01" ) )</dmn:text>
+          <dmn:text>[date( "2024-08-18" ) ..date( "2024-09-01" ) )</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_157ee696-74f4-45b5-a41e-02a5e670c307">
           <dmn:text>[date( "2024-08-18" ) ..date( "2024-09-01" ) )</dmn:text>
