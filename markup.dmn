@@ -1202,6 +1202,95 @@
           <dmn:text>EY-01</dmn:text>
         </dmn:annotationEntry>
       </dmn:rule>
+      <dmn:rule id="_1d59a435-19d8-4e01-a747-9c8607dbf1db">
+        <dmn:inputEntry id="_faf85266-1e11-44ed-be32-1b0c5259aff9">
+          <dmn:text>"CAT-03"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_133726f7-7106-451c-9585-8dbf946f48be">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4b7d449c-aa16-403f-894f-3431806263bf">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7b49a4f0-e621-4146-b146-e9108f11e8ce">
+          <dmn:text>"CP"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6706b264-26b6-4286-bb8b-da053a66eb73">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7c4d5fa9-32fa-425c-bcb7-6c8ba993bfea">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3a301573-7278-410b-b835-9aaf5da3e55a">
+          <dmn:text>"RT","OW","MC"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_d1df600c-07a9-4aaa-a809-f38efb7d98ca">
+          <dmn:text>"SV"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8e701999-658c-45b8-9993-e29c47bf6a4b">
+          <dmn:text>"SV"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_78b4b132-35d0-4f7a-977e-2257af33c6c3">
+          <dmn:text>"SV"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8669ea62-e472-4144-813a-df021058c84f">
+          <dmn:text>"KHI","LHE","ISB","MUX","PEW"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_e2df9fa1-c452-481e-8f40-91369273701b">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_bcb23104-d9e5-47df-9d62-01f51589acda">
+          <dmn:text>"CHD","ADT"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0a1841e4-f2dd-4361-8b1b-cfcd886c93f8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_394bdecf-af85-4d64-a0ed-79b49da6884c">
+          <dmn:text>"F","P","A","J","C","D","I","Y","E","B","M","K","H","L","Q","T","G"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_e721d555-9725-4032-a127-503e507ffd21">
+          <dmn:text>[date( "2024-12-01" ) ..date( "2025-01-01" ) )</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_157ee696-74f4-45b5-a41e-02a5e670c307">
+          <dmn:text>[date( "2024-08-18" ) ..date( "2025-01-01" ) )</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_219a426a-1506-4b22-9c08-371b79f4e7cb">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_fb73a7c7-69e6-498a-8be6-e3ec991bb521">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_053cd298-ef4f-475b-9b08-a24b3e972cad">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_555ddbe6-354a-464e-aae9-55286d247006">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_11e10732-b650-4a72-9d0c-b8a50539e8b2">
+          <dmn:text>2.75</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_1758d9be-a02f-469f-93db-98a195bdd787">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_c36b37e3-1d86-4e31-9df6-c59cfb832bf6">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_4fa1da00-22af-4307-82f3-35f5e40f34cb">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_439657ac-76eb-4487-8ddf-98fb022f5dc9">
+          <dmn:text>"Discount"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_ce515b65-f0d6-477c-9354-843973f2b3f3">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_a2e5dc5f-dfeb-4ffd-a312-d2279b878659">
+          <dmn:text>14</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>SV-01</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
   <dmn:inputData id="_92852862-45AC-4E9E-A3C4-12B6BCFD1105" name="Origin">
