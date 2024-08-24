@@ -804,10 +804,10 @@
           <dmn:text>"F","P","A","J","C","D","I","Y","E","B","M","K","H","L","Q","T","G"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_8955b979-e34b-421c-a4a6-d0c4fd17ad30">
-          <dmn:text>-</dmn:text>
+          <dmn:text>[date( "2024-12-01" ) ..date( "2025-01-01" ) )</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_d9849785-907b-4bfc-b453-fceeb9a63f7a">
-          <dmn:text>-</dmn:text>
+          <dmn:text>&lt;=date( "2024-08-31" )</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_10048701-c81b-4a36-8044-045ad43a1b2e">
           <dmn:text>-</dmn:text>
