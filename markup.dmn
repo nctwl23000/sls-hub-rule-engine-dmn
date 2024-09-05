@@ -1237,7 +1237,7 @@
           <dmn:text>not( ? in ["LHE","KHI"])</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_9dd438bb-ced8-40a7-ab58-29fcf330e91e">
-          <dmn:text>-</dmn:text>
+          <dmn:text>"LHE","KHI"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_7b717fed-07e0-45e5-8637-e12bd181c072">
           <dmn:text>"ADT","CHD"</dmn:text>
