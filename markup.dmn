@@ -273,7 +273,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_19D43B46-F857-491C-BEBE-7B398B6F5C41">
-          <dmn:text>-</dmn:text>
+          <dmn:text>&lt;=date( "2024-09-30" )</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_F7EA7697-B04F-465B-BCC5-99877DD3EE36">
           <dmn:text>-</dmn:text>
