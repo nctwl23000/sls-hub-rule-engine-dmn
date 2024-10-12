@@ -537,7 +537,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_e589e21e-ed9a-4100-a343-a02746f1c366">
-          <dmn:text>&lt;=date( "2024-12-31" )</dmn:text>
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_6ac02eb1-2a4f-4951-a316-7204dc09b0f7">
           <dmn:text>&lt;=date( "2024-12-31" )</dmn:text>
