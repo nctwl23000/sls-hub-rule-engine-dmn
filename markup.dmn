@@ -804,10 +804,10 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_b7db45ff-71ea-467b-b59f-c2e1e9029f52">
-          <dmn:text>-</dmn:text>
+          <dmn:text>&lt;=date( "2024-12-31" )</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_ebcc2ed5-c374-42f0-9f5c-a4c33f56d83d">
-          <dmn:text>-</dmn:text>
+          <dmn:text>&lt;=date( "2024-12-31" )</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_62d3f945-04f7-418b-ab31-69eae3ed7170">
           <dmn:text>-</dmn:text>
