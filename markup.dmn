@@ -3,9 +3,6 @@
   <dmn:extensionElements></dmn:extensionElements>
   <dmn:itemDefinition id="_1E91659D-9345-4087-A41C-1E59164B5BFD" name="Supplier" isCollection="false">
     <dmn:typeRef>string</dmn:typeRef>
-    <dmn:allowedValues kie:constraintType="enumeration" id="_56C3271B-A16C-4898-A479-DF72E43FF969">
-      <dmn:text>"1A", "1S", "1G", "PK", "G9", "FZ", "ER", "PF", "9P", "PA", "OV", "J9", "EK", "WY", "CP", "6E", "GF"</dmn:text>
-    </dmn:allowedValues>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_B7EA35A4-31E7-42F8-9429-FE7596D22C24" name="Pax Type" isCollection="false">
     <dmn:typeRef>string</dmn:typeRef>
@@ -40,7 +37,7 @@
   <dmn:itemDefinition id="_8F70C454-B9B1-488C-BC2F-1E810291DEE5" name="Service" isCollection="false">
     <dmn:typeRef>string</dmn:typeRef>
     <dmn:allowedValues kie:constraintType="enumeration" id="_0BAF8C16-706D-4902-A8B5-D2A6842A05B5">
-      <dmn:text>"Air", "Hotel"</dmn:text>
+      <dmn:text>"Air", "Hotel", "GroupBooking"</dmn:text>
     </dmn:allowedValues>
   </dmn:itemDefinition>
   <dmn:inputData id="_E05602D1-1C40-4C7B-9461-CA7D21047BFC" name="Supplier">
