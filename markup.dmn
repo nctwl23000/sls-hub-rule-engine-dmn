@@ -1026,7 +1026,7 @@
           <dmn:text>"CAT-03"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_d063c973-ffcf-4b1b-8d2e-198dbdf21031">
-          <dmn:text>true</dmn:text>
+          <dmn:text>false</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_8453fd02-01d2-44f6-b8b4-80610d2f5e72">
           <dmn:text>"Air"</dmn:text>
