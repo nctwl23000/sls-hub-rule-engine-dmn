@@ -371,10 +371,10 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_612137c1-21b0-44a8-b1ad-efe304fea8de">
-          <dmn:text>0</dmn:text>
+          <dmn:text>5000</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_70d6fc05-fae0-4165-9cea-bb729b57418e">
-          <dmn:text>3</dmn:text>
+          <dmn:text>0</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_174c42a8-7e60-4c33-8bf1-04e364ad35cf">
           <dmn:text>false</dmn:text>
@@ -386,7 +386,7 @@
           <dmn:text>true</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_cceae16f-483c-49c8-8429-fee4e2c8a284">
-          <dmn:text>"Discount"</dmn:text>
+          <dmn:text>"Service Fee"</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_5c385e4e-08ba-472b-97de-251bb7c9ff55">
           <dmn:text>false</dmn:text>
