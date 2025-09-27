@@ -329,16 +329,16 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_29629921-14db-45ac-b504-1773d5805acc">
-          <dmn:text>"OW","RT","MC"</dmn:text>
+          <dmn:text>"OW"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_f8cf0079-7c6b-4530-844d-8249022660a4">
-          <dmn:text>"PK"</dmn:text>
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_bb543f80-9ea6-4e7e-96d3-df792d25d1cc">
-          <dmn:text>"PK"</dmn:text>
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_d20af616-96a8-4d27-a277-340e8832f8e3">
-          <dmn:text>"PK"</dmn:text>
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_c84cdd28-67f7-4dd4-ae5c-3acc0f4e873f">
           <dmn:text>-</dmn:text>
@@ -347,7 +347,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_423feb5c-6d15-4283-a0a7-e6c97a64a72b">
-          <dmn:text>"ADT","CHD"</dmn:text>
+          <dmn:text>"ADT","CHD","INF"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_a2f53ccd-bd6d-41b6-b02b-40f6f4e6a88d">
           <dmn:text>-</dmn:text>
@@ -371,13 +371,13 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_612137c1-21b0-44a8-b1ad-efe304fea8de">
-          <dmn:text>5000</dmn:text>
+          <dmn:text>1000</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_70d6fc05-fae0-4165-9cea-bb729b57418e">
           <dmn:text>0</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_174c42a8-7e60-4c33-8bf1-04e364ad35cf">
-          <dmn:text>false</dmn:text>
+          <dmn:text>true</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_a0d976d1-af48-44f6-83a8-dfed893205b6">
           <dmn:text>true</dmn:text>
@@ -395,7 +395,7 @@
           <dmn:text>6</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
-          <dmn:text>PK-01</dmn:text>
+          <dmn:text>PSF ONE WAY</dmn:text>
         </dmn:annotationEntry>
       </dmn:rule>
       <dmn:rule id="_ba23d83f-6208-45d7-8068-21415caf82e5">
