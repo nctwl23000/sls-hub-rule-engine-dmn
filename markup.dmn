@@ -237,28 +237,28 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_F25FEF8E-06CD-4502-9114-28594AAD97C9">
-          <dmn:text>"71NF"</dmn:text>
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_2F57C7FE-34D8-4FB6-9010-5B99C39907C5">
-          <dmn:text>"OW","RT","MC"</dmn:text>
+          <dmn:text>"MC"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_B6CC606E-39BF-4963-A49A-2B3505CA580B">
-          <dmn:text>"UL"</dmn:text>
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_1C2EB6AD-337E-4575-8BC6-C2D757D1B316">
-          <dmn:text>"UL"</dmn:text>
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_847F66D8-66FE-4149-A384-DA6480BC756B">
-          <dmn:text>"UL"</dmn:text>
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_5F60B660-9128-4250-A358-3EA70092875F">
-          <dmn:text>"LHE","KHI","ISB"</dmn:text>
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_A2A2C61D-3C30-443E-BFAF-98360D390993">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_0A0F07E6-FF85-4414-A038-602CAE516427">
-          <dmn:text>"ADT","CHD"</dmn:text>
+          <dmn:text>"ADT","CHD","INF"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_B8DAA87B-7B9C-4DAE-8B45-3DB48BDCDECC">
           <dmn:text>-</dmn:text>
@@ -282,10 +282,10 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_BAC7D005-BA90-4EDF-AC28-BDC73225899B">
-          <dmn:text>0</dmn:text>
+          <dmn:text>2000</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_D4680D0E-2CC9-412E-A8CB-125392A1B71B">
-          <dmn:text>3.75</dmn:text>
+          <dmn:text>0</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_5859D674-8568-4488-9F3D-DE8496FB283B">
           <dmn:text>false</dmn:text>
@@ -297,7 +297,7 @@
           <dmn:text>true</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_AA6A6D95-D767-4D96-965B-5A45C0825AA9">
-          <dmn:text>"Discount"</dmn:text>
+          <dmn:text>"Service Fee"</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_080E65D7-4B7C-43F4-A8FA-FBA12078FABB">
           <dmn:text>false</dmn:text>
@@ -306,7 +306,7 @@
           <dmn:text>3</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
-          <dmn:text>UL-01</dmn:text>
+          <dmn:text>PSF MULTI CITY </dmn:text>
         </dmn:annotationEntry>
       </dmn:rule>
       <dmn:rule id="_b7070640-1371-49ee-bc41-cdf7c6fdd1cb">
