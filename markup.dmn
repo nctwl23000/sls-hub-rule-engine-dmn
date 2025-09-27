@@ -1172,7 +1172,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_7770b7cd-9f7f-4b86-9329-35fc866c5d70">
-          <dmn:text>100</dmn:text>
+          <dmn:text>1000</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_335f6128-f408-4757-87fd-43d8d27f9c2b">
           <dmn:text>0</dmn:text>
