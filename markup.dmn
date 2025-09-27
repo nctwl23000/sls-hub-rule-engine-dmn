@@ -662,7 +662,7 @@
           <dmn:text>11</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
-          <dmn:text>PSF - 9P,FZ,G9,OV,J9,XY</dmn:text>
+          <dmn:text>PSF on retuen</dmn:text>
         </dmn:annotationEntry>
       </dmn:rule>
       <dmn:rule id="_cf0a838a-a42f-4ac6-b357-5907b7204f20">
