@@ -460,7 +460,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_1afc3afe-3202-485d-b45b-59289cbb9885">
-          <dmn:text>1500</dmn:text>
+          <dmn:text>1000</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_fe4e4dd4-4d00-408b-85fa-b7a4a2d1722d">
           <dmn:text>0</dmn:text>
