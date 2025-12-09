@@ -492,7 +492,7 @@
           <dmn:text>"GRP-CAT-1"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_39f46edd-91cc-4664-9411-2f95ce49bfc7">
-          <dmn:text>false</dmn:text>
+          <dmn:text>true</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_20c6f3d4-96b7-4efb-904e-8ae6307283fb">
           <dmn:text>"GroupBooking"</dmn:text>
