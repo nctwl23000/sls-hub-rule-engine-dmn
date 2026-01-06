@@ -389,7 +389,7 @@
           <dmn:text>"Service Fee"</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_5c385e4e-08ba-472b-97de-251bb7c9ff55">
-          <dmn:text>false</dmn:text>
+          <dmn:text>true</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_7b794ce3-d435-40f5-ae56-d6ce9c985180">
           <dmn:text>6</dmn:text>
