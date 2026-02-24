@@ -759,7 +759,7 @@
           <dmn:text>"CAT-06"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_edb3dda8-1e29-4440-9a6f-958de00ee18f">
-          <dmn:text>false</dmn:text>
+          <dmn:text>true</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_bec6d724-dadd-46c8-abd8-cb2818637d18">
           <dmn:text>"Air"</dmn:text>
