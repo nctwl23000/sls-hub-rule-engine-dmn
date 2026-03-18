@@ -843,6 +843,95 @@
           <dmn:text>Multi City</dmn:text>
         </dmn:annotationEntry>
       </dmn:rule>
+      <dmn:rule id="_5655578b-698a-4aa5-848c-2468d82a847d">
+        <dmn:inputEntry id="_febbfd5d-7bc7-461d-b25c-d221c83d5dc9">
+          <dmn:text>"CAT-07"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_d0fe39fd-db07-40bd-bf23-75520c79ba66">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_fe9cc0e4-5891-4a58-8c1b-10e4d5414fe7">
+          <dmn:text>"Air"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6418a155-b2d8-4de5-8f6e-c6b1ef4687aa">
+          <dmn:text>"CP"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9408355b-a340-4b89-9fd0-4ce993ab1546">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_221fa4b0-79fe-4275-8933-321a2e25ac87">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4f5a7de8-1e9d-492e-988e-f8a65fed3539">
+          <dmn:text>"OW","RT","MC"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_b816ac63-edc6-444f-b015-07a5ce48759a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5256e227-8afd-4f78-bc91-79733bfab1b4">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_56f51fe5-e74b-4654-a40e-a015dfad2a92">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1a86b58e-ccb3-4f10-886a-18b7edcdc8c4">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_c3402709-72e9-46e8-a076-40844f5d3804">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3be5ab4e-f025-436a-83be-840ea3d58e57">
+          <dmn:text>"ADT","CHD","INF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_b6d82544-2d17-4863-a1c6-2dd3e4ef2927">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_f9a0fd7c-545d-489e-ae8a-f921bc6e2f87">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_c5f1540a-1180-4391-b409-18ba42b75ec5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_77996d76-87cf-4fd2-b552-6d99e27eb23d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_acab09ae-0d09-4066-90fd-835d5f78b8d6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_e5b09202-7d6a-44d4-b943-dab78e57d0e0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6e7e75fc-c666-4483-bbca-40881c7e42e2">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_e0d0e0d6-03c7-42b9-a2ae-2d91c2c210c1">
+          <dmn:text>3000</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_d21394c1-fba9-4569-b6c8-9f49bb58be45">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_4b70cfb3-1fd9-43f3-8340-5e8e55cd8ad9">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_6cdeeeaa-1ece-4ecb-a106-9316f35f9b83">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_e867278b-b357-462e-8b85-ba7ec97f28b8">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_1a3e3240-3241-4909-a449-f175c1af2918">
+          <dmn:text>"Service Fee"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_6a830cea-22e5-4a1c-98e3-ad931cbaaae6">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_82909d0a-4e57-428d-8c00-d0a34e5dee71">
+          <dmn:text>22</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>Cat-07</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
   <dmn:inputData id="_92852862-45AC-4E9E-A3C4-12B6BCFD1105" name="Origin">
